@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dqr12rc6qpe0b"]
+
+[ext_resource type="Script" uid="uid://bv3tmuiq2rnnt" path="res://scenes/player/player.gd" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://caw3paefqkq52" path="res://assets/player/salto_frente.tres" id="2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kifso"]
+radius = 27.0
+height = 134.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1165410864]
+script = ExtResource("1")
+
+[node name="Player_animation" type="AnimatedSprite2D" parent="." unique_id=1843478822]
+scale = Vector2(0.4, 0.4)
+sprite_frames = ExtResource("2")
+animation = &"salto"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=64789311]
+shape = SubResource("CapsuleShape2D_kifso")

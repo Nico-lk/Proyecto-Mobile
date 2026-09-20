@@ -1,6 +1,6 @@
-[gd_resource type="SpriteFrames" load_steps=10 format=3]
+[gd_resource type="SpriteFrames" format=3 uid="uid://ddlsmq74ym721"]
 
-[ext_resource type="Texture2D" path="res://assets/player/walk.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dsst0bld6bcai" path="res://assets/player/walk.png" id="1"]
 
 [sub_resource type="AtlasTexture" id="atlas_0"]
 atlas = ExtResource("1")
@@ -26,14 +26,6 @@ region = Rect2(0, 512, 512, 512)
 atlas = ExtResource("1")
 region = Rect2(512, 512, 512, 512)
 
-[sub_resource type="AtlasTexture" id="atlas_6"]
-atlas = ExtResource("1")
-region = Rect2(1024, 512, 512, 512)
-
-[sub_resource type="AtlasTexture" id="atlas_7"]
-atlas = ExtResource("1")
-region = Rect2(1536, 512, 512, 512)
-
 [resource]
 animations = [{
 "frames": [{
@@ -54,14 +46,8 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("atlas_5")
-}, {
-"duration": 1.0,
-"texture": SubResource("atlas_6")
-}, {
-"duration": 1.0,
-"texture": SubResource("atlas_7")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 12.0
 }]

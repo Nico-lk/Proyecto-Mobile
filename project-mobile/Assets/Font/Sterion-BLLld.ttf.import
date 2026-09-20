@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ll6040c1he4m"
-path="res://.godot/imported/Sterion-BLLld.ttf-27b16fd59f1e3fe75b155f2c6a0b8ba2.fontdata"
+path="res://.godot/imported/Sterion-BLLld.ttf-6d0c82ca1123ae8e00c45b60206e7f0c.fontdata"
 
 [deps]
 
-source_file="res://Assets/Font/Sterion-BLLld.ttf"
-dest_files=["res://.godot/imported/Sterion-BLLld.ttf-27b16fd59f1e3fe75b155f2c6a0b8ba2.fontdata"]
+source_file="res://Assets/font/Sterion-BLLld.ttf"
+dest_files=["res://.godot/imported/Sterion-BLLld.ttf-6d0c82ca1123ae8e00c45b60206e7f0c.fontdata"]
 
 [params]
 

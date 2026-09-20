@@ -1,9 +1,35 @@
 [gd_scene format=3 uid="uid://dy5mli84l0060"]
 
-[ext_resource type="Script" uid="uid://xv7ihqnlhr4q" path="res://Scripts/menu.gd" id="1_j7r1e"]
-[ext_resource type="Texture2D" uid="uid://bs4chuhb7bek1" path="res://Assets/Menu/Fondo.png" id="2_3ymnh"]
-[ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="3_3qr6s"]
-[ext_resource type="AudioStream" uid="uid://b8h0bgofhc6q7" path="res://Assets/Audio/JDSherbert - Sci Fi UI SFX Pack - Select - 1.wav" id="4_j7r1e"]
+[ext_resource type="Script" uid="uid://xv7ihqnlhr4q" path="res://Scripts/menu.gd" id="1_etjwi"]
+[ext_resource type="Texture2D" uid="uid://bs4chuhb7bek1" path="res://Assets/menu/Fondo.png" id="2_7g6em"]
+[ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://Scenes/menu/menu.gdshader" id="3_puqa6"]
+[ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/font/Sterion-BLLld.ttf" id="4_7g6em"]
+[ext_resource type="AudioStream" uid="uid://b8h0bgofhc6q7" path="res://Assets/audio/UI_Botton.wav" id="5_7g6em"]
+[ext_resource type="AudioStream" uid="uid://mrcs5bar4kks" path="res://Assets/audio/UI_Music_Menu.mp3" id="6_puqa6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jq8tk"]
+shader = ExtResource("3_puqa6")
+shader_parameter/hologram_color = Color(0.6088385, 0.39607686, 0, 1)
+shader_parameter/lines_frequency = 11.45700054094762
+shader_parameter/lines_speed = 0.34000001615
+shader_parameter/scan_glitch_speed = 0.9010000427975
+shader_parameter/alpha_glitch_speed = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_puqa6"]
+shader = ExtResource("3_puqa6")
+shader_parameter/hologram_color = Color(0, 0.8, 1, 1)
+shader_parameter/lines_frequency = 10.000000471740119
+shader_parameter/lines_speed = 1.0
+shader_parameter/scan_glitch_speed = 2.0
+shader_parameter/alpha_glitch_speed = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ku2mk"]
+shader = ExtResource("3_puqa6")
+shader_parameter/hologram_color = Color(0, 0.8, 1, 1)
+shader_parameter/lines_frequency = 10.000000471740119
+shader_parameter/lines_speed = 1.0
+shader_parameter/scan_glitch_speed = 2.0
+shader_parameter/alpha_glitch_speed = 0.0
 
 [node name="Menu" type="Control" unique_id=461586307]
 layout_mode = 3
@@ -12,16 +38,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_j7r1e")
+script = ExtResource("1_etjwi")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=278455333]
 layout_mode = 0
 offset_right = 1214.0
 offset_bottom = 1295.0
 scale = Vector2(0.59732884, 0.99512535)
-texture = ExtResource("2_3ymnh")
+texture = ExtResource("2_7g6em")
 
-[node name="Label" type="Label" parent="." unique_id=198083336]
+[node name="Titulo" type="Label" parent="." unique_id=198083336]
+material = SubResource("ShaderMaterial_jq8tk")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,11 +64,13 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0.5903413, 0.39341354, 1.92523e-07, 1)
 theme_override_constants/line_spacing = 3
 theme_override_constants/outline_size = 50
-theme_override_fonts/font = ExtResource("3_3qr6s")
+theme_override_fonts/font = ExtResource("4_7g6em")
 theme_override_font_sizes/font_size = 150
 text = "URAM"
 
 [node name="Jugar" type="Button" parent="." unique_id=1307823426]
+modulate = Color(0, 0.55224776, 0.58252686, 1)
+material = SubResource("ShaderMaterial_puqa6")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -55,15 +84,17 @@ offset_bottom = -13.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(3.2573965, 3.2573965, 3.2573965, 1)
-theme_override_fonts/font = ExtResource("3_3qr6s")
+theme_override_fonts/font = ExtResource("4_7g6em")
 theme_override_font_sizes/font_size = 80
 action_mode = 0
 text = "Jugar"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Jugar" unique_id=1672856161]
-stream = ExtResource("4_j7r1e")
+stream = ExtResource("5_7g6em")
 
 [node name="Salir" type="Button" parent="." unique_id=1842017204]
+modulate = Color(0, 0.5529412, 0.58431375, 1)
+material = SubResource("ShaderMaterial_ku2mk")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -77,13 +108,18 @@ offset_bottom = 117.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(3.2573965, 3.2573965, 3.2573965, 1)
-theme_override_fonts/font = ExtResource("3_3qr6s")
+theme_override_fonts/font = ExtResource("4_7g6em")
 theme_override_font_sizes/font_size = 80
 action_mode = 0
 text = "Salir"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Salir" unique_id=1409424991]
-stream = ExtResource("4_j7r1e")
+stream = ExtResource("5_7g6em")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1948294891]
+stream = ExtResource("6_puqa6")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dy5mli84l0060"]
+
+[ext_resource type="Script" uid="uid://xv7ihqnlhr4q" path="res://Scripts/menu.gd" id="1_j7r1e"]
+[ext_resource type="Texture2D" uid="uid://bs4chuhb7bek1" path="res://Assets/Menu/Fondo.png" id="2_3ymnh"]
+[ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="3_3qr6s"]
+[ext_resource type="AudioStream" uid="uid://b8h0bgofhc6q7" path="res://Assets/Audio/JDSherbert - Sci Fi UI SFX Pack - Select - 1.wav" id="4_j7r1e"]
+
+[node name="Menu" type="Control" unique_id=461586307]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j7r1e")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=278455333]
+layout_mode = 0
+offset_right = 1214.0
+offset_bottom = 1295.0
+scale = Vector2(0.59732884, 0.99512535)
+texture = ExtResource("2_3ymnh")
+
+[node name="Label" type="Label" parent="." unique_id=198083336]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.0
+offset_top = -412.0
+offset_right = 159.0
+offset_bottom = -275.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.5903413, 0.39341354, 1.92523e-07, 1)
+theme_override_constants/line_spacing = 3
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("3_3qr6s")
+theme_override_font_sizes/font_size = 150
+text = "URAM"
+
+[node name="Jugar" type="Button" parent="." unique_id=1307823426]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -131.5
+offset_right = 114.0
+offset_bottom = -13.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(3.2573965, 3.2573965, 3.2573965, 1)
+theme_override_fonts/font = ExtResource("3_3qr6s")
+theme_override_font_sizes/font_size = 80
+action_mode = 0
+text = "Jugar"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Jugar" unique_id=1672856161]
+stream = ExtResource("4_j7r1e")
+
+[node name="Salir" type="Button" parent="." unique_id=1842017204]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -0.5
+offset_right = 95.0
+offset_bottom = 117.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(3.2573965, 3.2573965, 3.2573965, 1)
+theme_override_fonts/font = ExtResource("3_3qr6s")
+theme_override_font_sizes/font_size = 80
+action_mode = 0
+text = "Salir"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Salir" unique_id=1409424991]
+stream = ExtResource("4_j7r1e")
+
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

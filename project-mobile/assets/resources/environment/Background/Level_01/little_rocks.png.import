@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l1qo3p7gb4w0"
-path="res://.godot/imported/walk_.png-8453b0db6e573299371ddf1a3024c04e.ctex"
+uid="uid://s1f6bbphhc0g"
+path="res://.godot/imported/little_rocks.png-77830b669ce6aa69d4083355410b3075.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/walk_.png"
-dest_files=["res://.godot/imported/walk_.png-8453b0db6e573299371ddf1a3024c04e.ctex"]
+source_file="res://assets/resources/environment/Background/Level_01/little_rocks.png"
+dest_files=["res://.godot/imported/little_rocks.png-77830b669ce6aa69d4083355410b3075.ctex"]
 
 [params]
 

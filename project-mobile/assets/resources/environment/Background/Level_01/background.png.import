@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s1f6bbphhc0g"
-path="res://.godot/imported/little_rocks.png-b943e3e1942fe10b77c00e93c87fa3fd.ctex"
+uid="uid://bvorubmwjwrwq"
+path="res://.godot/imported/background.png-b0c41e75defb22277218bf07d20d303a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/environment/Background/Level_01/little_rocks.png"
-dest_files=["res://.godot/imported/little_rocks.png-b943e3e1942fe10b77c00e93c87fa3fd.ctex"]
+source_file="res://assets/resources/environment/Background/Level_01/background.png"
+dest_files=["res://.godot/imported/background.png-b0c41e75defb22277218bf07d20d303a.ctex"]
 
 [params]
 

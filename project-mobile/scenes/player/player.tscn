@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqr12rc6qpe0b"]
 
 [ext_resource type="Script" uid="uid://bv3tmuiq2rnnt" path="res://scenes/player/player.gd" id="1"]
-[ext_resource type="SpriteFrames" uid="uid://6mkowgsdrskc" path="res://assets/player/player_frames.tres" id="2_dovo2"]
+[ext_resource type="SpriteFrames" uid="uid://6mkowgsdrskc" path="res://assets/resources/player/player_frames.tres" id="2_dovo2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kifso"]
 radius = 27.0
@@ -16,8 +16,15 @@ jump_velocity_side = -750.0
 scale = Vector2(0.4, 0.4)
 sprite_frames = ExtResource("2_dovo2")
 animation = &"salto_lateral"
-frame = 11
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=64789311]
 shape = SubResource("CapsuleShape2D_kifso")
+
+[node name="Camera2D2" type="Camera2D" parent="." unique_id=468744376]
+position = Vector2(0, -482)
+limit_left = 0
+limit_right = 768
+limit_bottom = 1250
+drag_vertical_enabled = true
+drag_top_margin = 0.9
+drag_bottom_margin = 0.0

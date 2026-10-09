@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oba78prebvnu"
-path="res://.godot/imported/plataformas2.png-ffd75796f2418b40f3bd2600af59dfeb.ctex"
+uid="uid://dsst0bld6bcai"
+path="res://.godot/imported/walk.png-ec3dba8872c4695e33ba693195e2cdb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/environment/Tileset/plataformas2.png"
-dest_files=["res://.godot/imported/plataformas2.png-ffd75796f2418b40f3bd2600af59dfeb.ctex"]
+source_file="res://assets/resources/player/walk.png"
+dest_files=["res://.godot/imported/walk.png-ec3dba8872c4695e33ba693195e2cdb1.ctex"]
 
 [params]
 

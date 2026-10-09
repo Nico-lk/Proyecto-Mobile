@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvorubmwjwrwq"
-path="res://.godot/imported/background.png-31974a405eb4ce2e83e42ab0c0143a3d.ctex"
+uid="uid://btuirilh41ijq"
+path="res://.godot/imported/aim_up.png-beca791f2637e61cf394bd841da51012.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/environment/Background/Level_01/background.png"
-dest_files=["res://.godot/imported/background.png-31974a405eb4ce2e83e42ab0c0143a3d.ctex"]
+source_file="res://assets/resources/player/aim_up.png"
+dest_files=["res://.godot/imported/aim_up.png-beca791f2637e61cf394bd841da51012.ctex"]
 
 [params]
 

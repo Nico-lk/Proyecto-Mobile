@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4ol4n0bjxm1s"
-path="res://.godot/imported/medium_rocks.png-ba15631c2a7379f7c2b4708fe376313d.ctex"
+uid="uid://k3jli0ey62td"
+path="res://.godot/imported/aiming_up.png-b2d04ae458cb07a89280237272a2faf1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/environment/Background/Level_01/medium_rocks.png"
-dest_files=["res://.godot/imported/medium_rocks.png-ba15631c2a7379f7c2b4708fe376313d.ctex"]
+source_file="res://assets/resources/player/aiming_up.png"
+dest_files=["res://.godot/imported/aiming_up.png-b2d04ae458cb07a89280237272a2faf1.ctex"]
 
 [params]
 

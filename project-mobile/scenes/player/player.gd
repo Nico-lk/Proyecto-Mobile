@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 @export var speed: float = 300.0
-@export var jump_velocity_front: float = -500.0
-@export var jump_velocity_side: float = -450.0
-@export var gravity: float = 980.0
+@export var jump_velocity_front: float = -400.0
+@export var jump_velocity_side: float = -500.0
+@export var gravity: float = 1150.0
 
 # 0 = usar la velocidad guardada en el SpriteFrames. >0 = sobrescribirla.
 @export_group("Animation FPS override")
@@ -42,7 +42,6 @@ func update_animations(input_dir: float, is_aiming_up: bool) -> void:
 		animated_sprite.flip_h = true
 	elif input_dir < 0:
 		animated_sprite.flip_h = false
-
 	if not is_on_floor():
 		if jump_type == "side":
 			_play(&"salto_lateral", salto_lateral_fps)
@@ -57,7 +56,6 @@ func update_animations(input_dir: float, is_aiming_up: bool) -> void:
 		_play(&"walk", walk_fps)
 	else:
 		_play(&"idle", idle_fps)
-
 func _play(anim: StringName, fps: float) -> void:
 	var frames := animated_sprite.sprite_frames
 	if not frames.has_animation(anim):

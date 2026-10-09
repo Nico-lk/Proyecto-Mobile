@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnrjdciq6ituh"
-path="res://.godot/imported/salto_frente.png-d3fcdd30b6a60eca41383de0d3e85069.ctex"
+uid="uid://c50qp57mcw5ng"
+path="res://.godot/imported/salto_lateral.png-c90f97b18752b20781c333be7d84b7e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/salto_frente.png"
-dest_files=["res://.godot/imported/salto_frente.png-d3fcdd30b6a60eca41383de0d3e85069.ctex"]
+source_file="res://assets/resources/player/salto_lateral.png"
+dest_files=["res://.godot/imported/salto_lateral.png-c90f97b18752b20781c333be7d84b7e1.ctex"]
 
 [params]
 

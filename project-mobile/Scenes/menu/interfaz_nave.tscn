@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://byw1q0y6sjcle"]
+
+[ext_resource type="Script" uid="uid://bbqmi0sm0437s" path="res://Scenes/menu/interfaz_nave.gd" id="1_0dqpo"]
+[ext_resource type="Texture2D" uid="uid://dal6bwoeq6ua" path="res://Assets/Menu/Interior_de_la_nave.jpg" id="1_xh7k7"]
+[ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="2_kvard"]
+
+[node name="InterfazNave" type="Control" unique_id=1789643280]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0dqpo")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1502608497]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+texture = ExtResource("1_xh7k7")
+
+[node name="Panel_Niveles" type="Button" parent="." unique_id=1671534164]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 641.0
+offset_right = 401.0
+offset_bottom = 770.0
+
+[node name="Label" type="Label" parent="Panel_Niveles" unique_id=289769240]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 138.0
+offset_right = 153.0
+offset_bottom = 175.0
+theme_override_fonts/font = ExtResource("2_kvard")
+theme_override_font_sizes/font_size = 27
+text = "Niveles"
+
+[node name="Impresora" type="Button" parent="." unique_id=1326425437]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 703.0
+offset_right = 201.0
+offset_bottom = 822.0
+
+[node name="Label" type="Label" parent="Impresora" unique_id=1458030722]
+layout_mode = 0
+offset_left = -19.0
+offset_top = 128.0
+offset_right = 150.0
+offset_bottom = 165.0
+theme_override_fonts/font = ExtResource("2_kvard")
+theme_override_font_sizes/font_size = 27
+text = "Mejoras"
+
+[node name="Mineria" type="Button" parent="." unique_id=1022691470]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Salir_Al_Menu" type="Button" parent="." unique_id=351192825]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 228.0
+offset_right = 216.0
+offset_bottom = 372.0
+
+[node name="Label" type="Label" parent="Salir_Al_Menu" unique_id=2047948572]
+layout_mode = 0
+offset_left = -36.0
+offset_top = 152.0
+offset_right = 270.0
+offset_bottom = 189.0
+theme_override_fonts/font = ExtResource("2_kvard")
+theme_override_font_sizes/font_size = 27
+text = "Volver al menu"
+
+[node name="Compras" type="Button" parent="." unique_id=2033276833]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 822.0
+offset_right = 703.0
+offset_bottom = 943.0
+
+[node name="Label" type="Label" parent="Compras" unique_id=1578249003]
+layout_mode = 0
+offset_left = -83.0
+offset_top = 130.0
+offset_right = 155.0
+offset_bottom = 167.0
+theme_override_fonts/font = ExtResource("2_kvard")
+theme_override_font_sizes/font_size = 27
+text = "Coming Soon"

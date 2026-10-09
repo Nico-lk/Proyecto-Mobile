@@ -7,7 +7,7 @@ func _ready() -> void:
 func _on_jugar_pressed() -> void:
 	$Jugar/AudioStreamPlayer.play()
 	await get_tree().create_timer(0.5).timeout
-	get_tree().change_scene_to_file("res://Scenes/levels/level_1.tscn")
+	get_tree().change_scene_to_file("res://Scenes/menu/interfaz_nave.tscn")
 
 func _on_salir_pressed() -> void:
 	$Salir/AudioStreamPlayer.play()

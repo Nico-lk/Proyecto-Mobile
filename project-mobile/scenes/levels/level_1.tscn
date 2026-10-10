@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c1lvl01floor0"]
 
 [ext_resource type="PackedScene" uid="uid://dqr12rc6qpe0b" path="res://scenes/player/player.tscn" id="1_player"]
+[ext_resource type="PackedScene" uid="uid://mk7lhyr1rlh" path="res://scenes/dron/dron.tscn" id="2_nsrm0"]
+[ext_resource type="PackedScene" uid="uid://bt5v6m30phdum" path="res://scenes/enemy/enemy.tscn" id="3_x42e6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
 size = Vector2(2000, 60)
@@ -17,8 +19,14 @@ shape = SubResource("RectangleShape2D_floor")
 color = Color(0.3, 0.3, 0.35, 1)
 polygon = PackedVector2Array(-1000, -30, 1000, -30, 1000, 30, -1000, 30)
 
-[node name="Player" parent="." unique_id=970159852 instance=ExtResource("1_player")]
+[node name="Player" parent="." unique_id=970159852 groups=["player"] instance=ExtResource("1_player")]
 position = Vector2(360, 1146)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=741456505]
 position = Vector2(360, 640)
+
+[node name="dron" parent="." unique_id=648491918 instance=ExtResource("2_nsrm0")]
+position = Vector2(0, 678)
+
+[node name="enemy" parent="." unique_id=517784478 instance=ExtResource("3_x42e6")]
+position = Vector2(-100, -40)

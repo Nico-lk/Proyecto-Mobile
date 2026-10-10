@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://mk7lhyr1rlh"]
+
+[ext_resource type="Script" uid="uid://bw4b264e07np0" path="res://scenes/dron/dron.gd" id="1_kv0wm"]
+[ext_resource type="Texture2D" uid="uid://bxgw8ccqdt5gt" path="res://icon.svg" id="2_4aet5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ykry"]
+radius = 441.24896
+
+[node name="dron" type="CharacterBody2D" unique_id=648491918]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_kv0wm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1492823849]
+scale = Vector2(0.493, 0.5)
+texture = ExtResource("2_4aet5")
+
+[node name="AreaDeteccion" type="Area2D" parent="." unique_id=139038894]
+scale = Vector2(0.493, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDeteccion" unique_id=2095561072]
+shape = SubResource("CircleShape2D_8ykry")
+
+[node name="TimerAtaque" type="Timer" parent="." unique_id=801865147]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=3956373]

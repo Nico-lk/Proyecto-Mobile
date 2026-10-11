@@ -3,10 +3,19 @@
 [ext_resource type="Script" uid="uid://ch8d2rws343m0" path="res://Scenes/menu/seleccionar_nivel.gd" id="1_3esmm"]
 [ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="1_phunf"]
 [ext_resource type="Texture2D" uid="uid://c3vhngsw5ebec" path="res://Assets/Menu/Iconos/frame_002.png" id="3_hcent"]
+[ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://Scenes/menu/menu.gdshader" id="4_qmri6"]
+[ext_resource type="Texture2D" uid="uid://c3c3vfe2ew53y" path="res://Assets/Menu/Iconos/frame_021.png" id="4_vduas"]
+[ext_resource type="AudioStream" uid="uid://b8h0bgofhc6q7" path="res://Assets/audio/UI_Botton.wav" id="6_8pcgv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3xd07"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jq8tk"]
+shader = ExtResource("4_qmri6")
+shader_parameter/hologram_color = Color(0, 0.8, 1, 1)
+shader_parameter/lines_frequency = 10.000000471740119
+shader_parameter/lines_speed = 1.0
+shader_parameter/scan_glitch_speed = 2.0
+shader_parameter/alpha_glitch_speed = 0.0
 
 [node name="SeleccionarNivel" type="Control" unique_id=939338658]
 layout_mode = 3
@@ -27,34 +36,75 @@ material = SubResource("ShaderMaterial_3xd07")
 layout_mode = 0
 offset_top = 3.0
 offset_right = 720.0
-offset_bottom = 195.0
+offset_bottom = 124.0
 theme_override_fonts/font = ExtResource("1_phunf")
 theme_override_font_sizes/font_size = 57
 text = "Seleccionar Nivel"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="UramNivel1" type="Button" parent="." unique_id=1535186233]
+[node name="UramLevel1" type="Button" parent="." unique_id=1535186233]
 layout_mode = 0
-offset_left = 352.0
-offset_top = 783.0
-offset_right = 430.0
-offset_bottom = 861.0
-scale = Vector2(2, 2)
-offset_transform_enabled = true
-icon = ExtResource("3_hcent")
-
-[node name="Label" type="Label" parent="UramNivel1" unique_id=1353110996]
-layout_mode = 0
-offset_left = -140.0
-offset_top = 26.5
-offset_right = -4.0
-offset_bottom = 55.5
+offset_left = 85.0
+offset_top = 843.0
+offset_right = 662.0
+offset_bottom = 997.0
 theme_override_fonts/font = ExtResource("1_phunf")
-theme_override_font_sizes/font_size = 30
-text = "Nivel 1"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_font_sizes/font_size = 40
+text = "Level 1"
+icon = ExtResource("3_hcent")
+expand_icon = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UramLevel1" unique_id=573265890]
+stream = ExtResource("6_8pcgv")
+
+[node name="UramLevel2" type="Button" parent="." unique_id=1879827910]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 669.0
+offset_right = 663.0
+offset_bottom = 823.0
+theme_override_fonts/font = ExtResource("1_phunf")
+theme_override_font_sizes/font_size = 40
+text = "Level 2"
+icon = ExtResource("3_hcent")
+expand_icon = true
+
+[node name="UramLevel3" type="Button" parent="." unique_id=794533703]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 493.0
+offset_right = 662.0
+offset_bottom = 647.0
+theme_override_fonts/font = ExtResource("1_phunf")
+theme_override_font_sizes/font_size = 40
+text = "Level 3"
+icon = ExtResource("3_hcent")
+expand_icon = true
+
+[node name="UramLevel4" type="Button" parent="." unique_id=1037016387]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 315.0
+offset_right = 662.0
+offset_bottom = 469.0
+theme_override_fonts/font = ExtResource("1_phunf")
+theme_override_font_sizes/font_size = 40
+text = "Level 4"
+icon = ExtResource("3_hcent")
+expand_icon = true
+
+[node name="UramLevelBoss" type="Button" parent="." unique_id=1926812062]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 137.0
+offset_right = 663.0
+offset_bottom = 291.0
+theme_override_fonts/font = ExtResource("1_phunf")
+theme_override_font_sizes/font_size = 40
+text = "Boss"
+icon = ExtResource("4_vduas")
+expand_icon = true
 
 [node name="Volver" type="Button" parent="." unique_id=1571761689]
 material = SubResource("ShaderMaterial_jq8tk")
@@ -66,5 +116,8 @@ theme_override_fonts/font = ExtResource("1_phunf")
 theme_override_font_sizes/font_size = 130
 text = "Volver"
 
-[connection signal="pressed" from="UramNivel1" to="." method="_on_uram_nivel_1_pressed"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Volver" unique_id=489711829]
+stream = ExtResource("6_8pcgv")
+
+[connection signal="pressed" from="UramLevel1" to="." method="_on_uram_nivel_1_pressed"]
 [connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]

@@ -2,6 +2,16 @@
 
 [ext_resource type="Script" uid="uid://y1hccesvhcq2" path="res://Scenes/menu/seleccionar_mejoras.gd" id="1_61taj"]
 [ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="1_dca5o"]
+[ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://Scenes/menu/menu.gdshader" id="3_2h14p"]
+[ext_resource type="AudioStream" uid="uid://b8h0bgofhc6q7" path="res://Assets/audio/UI_Botton.wav" id="4_e0d7u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hcent"]
+shader = ExtResource("3_2h14p")
+shader_parameter/hologram_color = Color(0, 0.8, 1, 1)
+shader_parameter/lines_frequency = 10.000000471740119
+shader_parameter/lines_speed = 1.0
+shader_parameter/scan_glitch_speed = 2.0
+shader_parameter/alpha_glitch_speed = 0.0
 
 [node name="SeleccionarMejoras" type="Control" unique_id=1939811591]
 layout_mode = 3
@@ -28,6 +38,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Volver" type="Button" parent="." unique_id=307481891]
+material = SubResource("ShaderMaterial_hcent")
 layout_mode = 0
 offset_top = 1072.0
 offset_right = 720.0
@@ -35,6 +46,9 @@ offset_bottom = 1280.0
 theme_override_fonts/font = ExtResource("1_dca5o")
 theme_override_font_sizes/font_size = 130
 text = "Volver"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Volver" unique_id=501780804]
+stream = ExtResource("4_e0d7u")
 
 [node name="Label2" type="Label" parent="." unique_id=267095504]
 layout_mode = 0

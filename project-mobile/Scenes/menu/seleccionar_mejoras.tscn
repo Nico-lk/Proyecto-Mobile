@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://ew6sgw3bx1rc"]
 
+[ext_resource type="Script" uid="uid://y1hccesvhcq2" path="res://Scenes/menu/seleccionar_mejoras.gd" id="1_61taj"]
+[ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="1_dca5o"]
+
 [node name="SeleccionarMejoras" type="Control" unique_id=1939811591]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +10,42 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_61taj")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=222944841]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="." unique_id=12903424]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 118.0
+theme_override_fonts/font = ExtResource("1_dca5o")
+theme_override_font_sizes/font_size = 53
+text = "Construir mejoras"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Volver" type="Button" parent="." unique_id=307481891]
+layout_mode = 0
+offset_top = 1072.0
+offset_right = 720.0
+offset_bottom = 1280.0
+theme_override_fonts/font = ExtResource("1_dca5o")
+theme_override_font_sizes/font_size = 130
+text = "Volver"
+
+[node name="Label2" type="Label" parent="." unique_id=267095504]
+layout_mode = 0
+offset_top = 328.0
+offset_right = 720.0
+offset_bottom = 670.0
+theme_override_fonts/font = ExtResource("1_dca5o")
+theme_override_font_sizes/font_size = 54
+text = "work in progress
+maybe..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]

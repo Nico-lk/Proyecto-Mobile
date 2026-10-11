@@ -1,5 +1,13 @@
 [gd_scene format=3 uid="uid://rdf5d81hmj4w"]
 
+[ext_resource type="Script" uid="uid://ch8d2rws343m0" path="res://Scenes/menu/seleccionar_nivel.gd" id="1_3esmm"]
+[ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="1_phunf"]
+[ext_resource type="Texture2D" uid="uid://c3vhngsw5ebec" path="res://Assets/Menu/Iconos/frame_002.png" id="3_hcent"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3xd07"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jq8tk"]
+
 [node name="SeleccionarNivel" type="Control" unique_id=939338658]
 layout_mode = 3
 anchors_preset = 15
@@ -7,8 +15,56 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3esmm")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=314006637]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="." unique_id=118331508]
+material = SubResource("ShaderMaterial_3xd07")
+layout_mode = 0
+offset_top = 3.0
+offset_right = 720.0
+offset_bottom = 195.0
+theme_override_fonts/font = ExtResource("1_phunf")
+theme_override_font_sizes/font_size = 57
+text = "Seleccionar Nivel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UramNivel1" type="Button" parent="." unique_id=1535186233]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 783.0
+offset_right = 430.0
+offset_bottom = 861.0
+scale = Vector2(2, 2)
+offset_transform_enabled = true
+icon = ExtResource("3_hcent")
+
+[node name="Label" type="Label" parent="UramNivel1" unique_id=1353110996]
+layout_mode = 0
+offset_left = -140.0
+offset_top = 26.5
+offset_right = -4.0
+offset_bottom = 55.5
+theme_override_fonts/font = ExtResource("1_phunf")
+theme_override_font_sizes/font_size = 30
+text = "Nivel 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Volver" type="Button" parent="." unique_id=1571761689]
+material = SubResource("ShaderMaterial_jq8tk")
+layout_mode = 0
+offset_top = 1055.0
+offset_right = 720.0
+offset_bottom = 1279.0
+theme_override_fonts/font = ExtResource("1_phunf")
+theme_override_font_sizes/font_size = 130
+text = "Volver"
+
+[connection signal="pressed" from="UramNivel1" to="." method="_on_uram_nivel_1_pressed"]
+[connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]

@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c2asw6fffbekg" path="res://Assets/Menu/Iconos/frame_022.png" id="4_kpkvt"]
 [ext_resource type="AudioStream" uid="uid://b8h0bgofhc6q7" path="res://Assets/audio/UI_Botton.wav" id="5_kpkvt"]
 [ext_resource type="Texture2D" uid="uid://baki03ymrpqoa" path="res://Assets/Menu/Iconos/frame_026.png" id="7_kpkvt"]
+[ext_resource type="AudioStream" uid="uid://xn4q7rvver73" path="res://Assets/audio/UI_Error.wav" id="10_5r2py"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_puqa6"]
 shader = ExtResource("3_g5km7")
@@ -155,6 +156,9 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Compras" unique_id=365322215]
+stream = ExtResource("10_5r2py")
+
 [node name="Label" type="Label" parent="Compras" unique_id=1578249003]
 material = SubResource("ShaderMaterial_0dqpo")
 layout_mode = 0
@@ -169,3 +173,4 @@ text = "Coming Soon"
 [connection signal="pressed" from="Panel_Niveles" to="." method="_on_panel_niveles_pressed"]
 [connection signal="pressed" from="Impresora" to="." method="_on_impresora_pressed"]
 [connection signal="pressed" from="Salir_Al_Menu" to="." method="_on_salir_al_menu_pressed"]
+[connection signal="pressed" from="Compras" to="." method="_on_compras_pressed"]

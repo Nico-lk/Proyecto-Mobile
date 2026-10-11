@@ -2234,7 +2234,7 @@ rotation = 1.5707964
 scale = Vector2(2, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParedDerecha" unique_id=227541403]
-position = Vector2(494.75003, -6.1035156e-05)
+position = Vector2(247, -3.9376162e-05)
 shape = SubResource("RectangleShape2D_q3ykf")
 
 [node name="Visual" type="Polygon2D" parent="ParedDerecha" unique_id=499735051]

@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://dqr12rc6qpe0b" path="res://scenes/player/player.tscn" id="1_player"]
 [ext_resource type="PackedScene" uid="uid://mk7lhyr1rlh" path="res://scenes/dron/dron.tscn" id="2_nsrm0"]
-[ext_resource type="PackedScene" uid="uid://bt5v6m30phdum" path="res://scenes/enemy/enemy.tscn" id="3_x42e6"]
 [ext_resource type="PackedScene" uid="uid://dcew2b8p0kg8s" path="res://scenes/spawnerenemigos/spawner_enemigos.tscn" id="4_x42e6"]
+[ext_resource type="PackedScene" uid="uid://dy1sg7jiohkcf" path="res://scenes/hud/hud.tscn" id="5_6761a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
 size = Vector2(2000, 60)
@@ -23,13 +23,16 @@ polygon = PackedVector2Array(-1000, -30, 1000, -30, 1000, 30, -1000, 30)
 [node name="Player" parent="." unique_id=970159852 instance=ExtResource("1_player")]
 position = Vector2(360, 1146)
 
+[node name="dron" parent="." unique_id=648491918 instance=ExtResource("2_nsrm0")]
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=741456505]
 position = Vector2(360, 640)
 
-[node name="dron" parent="." unique_id=648491918 instance=ExtResource("2_nsrm0")]
-position = Vector2(0, 678)
-
-[node name="enemy" parent="." unique_id=517784478 instance=ExtResource("3_x42e6")]
-position = Vector2(-100, -40)
-
 [node name="SpawnerEnemigos" parent="." unique_id=504348725 instance=ExtResource("4_x42e6")]
+position = Vector2(352, 145)
+
+[node name="HUD" parent="." unique_id=829710169 instance=ExtResource("5_6761a")]
+offset_left = 38.0
+offset_top = 45.0
+offset_right = 238.0
+offset_bottom = 65.0

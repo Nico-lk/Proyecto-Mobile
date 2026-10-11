@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dy1sg7jiohkcf"]
+
+[ext_resource type="Script" uid="uid://dxy8up2478yqn" path="res://scenes/hud/progressbar.gd" id="1_48c2t"]
+
+[node name="HUD" type="Control" unique_id=829710169]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -500.0
+offset_bottom = -1240.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1988245010]
+self_modulate = Color(4.235506e-06, 0.71585345, 0.9901522, 1)
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 20.0
+value = 100.0
+show_percentage = false
+script = ExtResource("1_48c2t")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=402480557]

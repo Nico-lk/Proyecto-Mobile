@@ -8,6 +8,7 @@ radius = 27.0
 height = 134.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1165410864 groups=["player"]]
+collision_layer = 9
 script = ExtResource("1")
 jump_velocity_front = -700.0
 jump_velocity_side = -750.0
@@ -21,3 +22,8 @@ frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=64789311]
 shape = SubResource("CapsuleShape2D_kifso")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1682603955]
+limit_left = 0
+limit_right = 768
+limit_bottom = 1300

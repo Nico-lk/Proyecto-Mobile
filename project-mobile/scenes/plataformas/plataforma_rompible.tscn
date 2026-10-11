@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bwt65wqt8i47f"]
+
+[ext_resource type="Script" uid="uid://bjfvu0xbkef58" path="res://scenes/plataformas/plataforma_rompible.gd" id="1_75slp"]
+[ext_resource type="Texture2D" uid="uid://bxgw8ccqdt5gt" path="res://icon.svg" id="1_ssww8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3ykf"]
+size = Vector2(40.75, 13.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8i7t1"]
+size = Vector2(50.28125, 16.25)
+
+[node name="PlataformaRompible" type="StaticBody2D" unique_id=411486822]
+script = ExtResource("1_75slp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=865552409]
+position = Vector2(-0.2500019, 5.9604645e-07)
+scale = Vector2(0.41015628, 0.14062501)
+texture = ExtResource("1_ssww8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2006809889]
+shape = SubResource("RectangleShape2D_q3ykf")
+
+[node name="Detector" type="Area2D" parent="." unique_id=1947379337]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector" unique_id=241595969]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_8i7t1")

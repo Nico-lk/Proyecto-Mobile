@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://0xe500ru5yll" path="res://scenes/pinches/pinche_techo.tscn" id="5_sk5k4"]
 [ext_resource type="PackedScene" uid="uid://c8mk5jrlcchch" path="res://scenes/pinches/pinche_suelo.tscn" id="7_oc4kc"]
 [ext_resource type="PackedScene" uid="uid://ce2wolf3q8j1y" path="res://scenes/plataformas/plataforma_movil.tscn" id="8_s8va5"]
+[ext_resource type="PackedScene" uid="uid://bwt65wqt8i47f" path="res://scenes/plataformas/plataforma_rompible.tscn" id="9_dga24"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk5k4"]
 texture = ExtResource("4_6761a")
@@ -2217,6 +2218,7 @@ position = Vector2(269, 846)
 position = Vector2(374, 1189)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=741456505]
+visible = false
 position = Vector2(384, 640)
 
 [node name="Pinche2" parent="." unique_id=1885523413 instance=ExtResource("5_sk5k4")]
@@ -2259,3 +2261,6 @@ position = Vector2(121, 483)
 sync_to_physics = false
 velocidad = 200.0
 distancia = 500.0
+
+[node name="PlataformaRompible" parent="." unique_id=411486822 instance=ExtResource("9_dga24")]
+position = Vector2(269, 1115)

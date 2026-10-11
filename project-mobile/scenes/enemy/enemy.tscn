@@ -4,21 +4,23 @@
 [ext_resource type="Texture2D" uid="uid://bxgw8ccqdt5gt" path="res://icon.svg" id="2_84vye"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m2g58"]
+radius = 53.08484
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8ykry"]
-radius = 444.04053
+radius = 800.0
 
 [node name="enemy" type="CharacterBody2D" unique_id=517784478 groups=["enemigos"]]
-collision_layer = 4
+collision_layer = 2
 script = ExtResource("1_muyyy")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1870818354 groups=["enemigos"]]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1870818354]
 texture = ExtResource("2_84vye")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1697732557]
 shape = SubResource("CircleShape2D_m2g58")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=159937028]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=530921192]
 shape = SubResource("CircleShape2D_8ykry")

@@ -2,14 +2,18 @@
 
 [ext_resource type="Script" uid="uid://bw4b264e07np0" path="res://scenes/dron/dron.gd" id="1_kv0wm"]
 [ext_resource type="Texture2D" uid="uid://bxgw8ccqdt5gt" path="res://icon.svg" id="2_4aet5"]
+[ext_resource type="PackedScene" uid="uid://c0h0il2e5sler" path="res://scenes/Laser/Laser.tscn" id="3_j87k5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8ykry"]
-radius = 441.24896
+radius = 650.0
 
 [node name="dron" type="CharacterBody2D" unique_id=648491918]
 collision_layer = 2
 collision_mask = 4
 script = ExtResource("1_kv0wm")
+escena_laser = ExtResource("3_j87k5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=3956373]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1492823849]
 scale = Vector2(0.493, 0.5)
@@ -17,10 +21,11 @@ texture = ExtResource("2_4aet5")
 
 [node name="AreaDeteccion" type="Area2D" parent="." unique_id=139038894]
 scale = Vector2(0.493, 0.5)
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDeteccion" unique_id=2095561072]
 shape = SubResource("CircleShape2D_8ykry")
 
 [node name="TimerAtaque" type="Timer" parent="." unique_id=801865147]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=3956373]
+wait_time = 0.8

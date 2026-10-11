@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://0xe500ru5yll"]
+
+[ext_resource type="Script" uid="uid://blshgbfpvhmll" path="res://scenes/pinches/pinche_techo.gd" id="1_jssjc"]
+[ext_resource type="Texture2D" uid="uid://bxgw8ccqdt5gt" path="res://icon.svg" id="2_6qdlo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3ykf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8sm51"]
+size = Vector2(20, 358)
+
+[node name="pinche_techo" type="Area2D" unique_id=726667920]
+script = ExtResource("1_jssjc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1557545702]
+position = Vector2(-3.8146973e-06, 3.8146973e-06)
+scale = Vector2(0.32617188, 0.32617188)
+texture = ExtResource("2_6qdlo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1840983561]
+shape = SubResource("RectangleShape2D_q3ykf")
+
+[node name="Detector" type="Area2D" parent="." unique_id=60037727]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector" unique_id=387448806]
+position = Vector2(0, 169)
+shape = SubResource("RectangleShape2D_8sm51")
+
+[connection signal="body_entered" from="Detector" to="." method="_on_detector_body_entered"]

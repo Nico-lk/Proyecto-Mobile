@@ -1,9 +1,8 @@
 extends CharacterBody2D
 
-'''PRUEBA'''
+
 @onready var tilemap: TileMapLayer = $"../TileMapLayer"
-var celdas_rompiendose: Dictionary = {}  # Evita activar la misma celda dos veces
-'''PRUEBA'''
+
 @export var speed: float = 300.0
 @export var jump_velocity_front: float = -500.0
 @export var jump_velocity_side: float = -450.0
@@ -21,12 +20,19 @@ var celdas_rompiendose: Dictionary = {}  # Evita activar la misma celda dos vece
 @onready var animated_sprite: AnimatedSprite2D = $Player_animation
 
 var jump_type: String = "front"
+var celdas_rompiendose: Dictionary = {}  # Evita activar la misma celda dos veces
+var vida: int = 100
 
 func _ready() -> void:
 	var f := animated_sprite.sprite_frames
 	print("SpriteFrames: ", f.resource_path, " | idle speed: ", f.get_animation_speed(&"idle"))
 
 func _physics_process(delta: float) -> void:
+	
+	if vida <= 0:
+		#Agregar muerte
+		pass
+
 	velocity.y += gravity * delta
 
 	var input_dir := Input.get_axis("ui_left", "ui_right")
@@ -125,3 +131,14 @@ func romper_tile(celda_inicial: Vector2i) -> void:
 		tilemap.erase_cell(c)
 	
 	celdas_rompiendose.erase(celda_inicial)
+	
+func recibir_dano() -> void:
+	vida-=5
+	print("Vida restante: ", vida)
+	# Pequeño feedback visual: parpadeo rojo
+	var tween := create_tween()
+	tween.tween_property(animated_sprite, "modulate", Color.RED, 0.1)
+	tween.tween_property(animated_sprite, "modulate", Color.WHITE, 0.1)
+	
+	if vida <= 0:
+		get_tree().reload_current_scene()

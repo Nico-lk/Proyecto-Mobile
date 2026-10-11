@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c8mk5jrlcchch"]
+
+[ext_resource type="Texture2D" uid="uid://bxgw8ccqdt5gt" path="res://icon.svg" id="1_0p1cg"]
+[ext_resource type="Script" uid="uid://c8pq8extdlqco" path="res://scenes/pinches/pinche_suelo.gd" id="1_e10se"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sk5k4"]
+size = Vector2(127, 63.5)
+
+[node name="PincheSuelo" type="Area2D" unique_id=706088381]
+script = ExtResource("1_e10se")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=26077510]
+texture = ExtResource("1_0p1cg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=698035391]
+position = Vector2(-0.5, -31.75)
+shape = SubResource("RectangleShape2D_sk5k4")

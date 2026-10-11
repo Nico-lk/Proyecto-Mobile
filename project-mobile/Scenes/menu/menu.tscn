@@ -118,6 +118,7 @@ stream = ExtResource("5_7g6em")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1948294891]
 stream = ExtResource("6_puqa6")
+volume_db = -20.982
 autoplay = true
 parameters/looping = true
 

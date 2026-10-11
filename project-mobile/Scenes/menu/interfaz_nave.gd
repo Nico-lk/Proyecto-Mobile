@@ -5,7 +5,19 @@ extends Control
 func _ready() -> void:
 	pass # Replace with function body.
 
+func _on_panel_niveles_pressed() -> void:
+	$Panel_Niveles/AudioStreamPlayer.play()
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_file("res://Scenes/menu/seleccionar_nivel.tscn")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
+func _on_impresora_pressed() -> void:
+	$Impresora/AudioStreamPlayer.play()
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_file("res://Scenes/menu/seleccionar_mejoras.tscn")
+
+
+func _on_salir_al_menu_pressed() -> void:
+	$Salir_Al_Menu/AudioStreamPlayer.play()
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_file("res://Scenes/menu/menu.tscn")

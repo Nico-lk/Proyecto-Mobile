@@ -3,6 +3,52 @@
 [ext_resource type="Script" uid="uid://bbqmi0sm0437s" path="res://Scenes/menu/interfaz_nave.gd" id="1_0dqpo"]
 [ext_resource type="Texture2D" uid="uid://dal6bwoeq6ua" path="res://Assets/Menu/Interior_de_la_nave.jpg" id="1_xh7k7"]
 [ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="2_kvard"]
+[ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://Scenes/menu/menu.gdshader" id="3_g5km7"]
+[ext_resource type="Texture2D" uid="uid://dyax3wnljtnoq" path="res://Assets/Menu/Iconos/frame_001.png" id="4_6u5iw"]
+[ext_resource type="Texture2D" uid="uid://lh4605ydtl5j" path="res://Assets/Menu/Iconos/frame_024.png" id="4_7oh2x"]
+[ext_resource type="Texture2D" uid="uid://c2asw6fffbekg" path="res://Assets/Menu/Iconos/frame_022.png" id="4_kpkvt"]
+[ext_resource type="AudioStream" uid="uid://b8h0bgofhc6q7" path="res://Assets/audio/UI_Botton.wav" id="5_kpkvt"]
+[ext_resource type="Texture2D" uid="uid://baki03ymrpqoa" path="res://Assets/Menu/Iconos/frame_026.png" id="7_kpkvt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_puqa6"]
+shader = ExtResource("3_g5km7")
+shader_parameter/hologram_color = Color(1, 0.627451, 0.14509805, 1)
+shader_parameter/lines_frequency = 10.000000471740119
+shader_parameter/lines_speed = 1.0
+shader_parameter/scan_glitch_speed = 2.0
+shader_parameter/alpha_glitch_speed = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0dqpo"]
+shader = ExtResource("3_g5km7")
+shader_parameter/hologram_color = Color(0, 0.8, 1, 1)
+shader_parameter/lines_frequency = 10.00000047174012
+shader_parameter/lines_speed = 1.0
+shader_parameter/scan_glitch_speed = 2.0
+shader_parameter/alpha_glitch_speed = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7g6em"]
+shader = ExtResource("3_g5km7")
+shader_parameter/hologram_color = Color(1, 0.627451, 0.14509805, 1)
+shader_parameter/lines_frequency = 10.000000471740119
+shader_parameter/lines_speed = 1.0
+shader_parameter/scan_glitch_speed = 2.0
+shader_parameter/alpha_glitch_speed = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2sxwg"]
+shader = ExtResource("3_g5km7")
+shader_parameter/hologram_color = Color(1, 0.62904143, 0.1431793, 1)
+shader_parameter/lines_frequency = 10.000000471740119
+shader_parameter/lines_speed = 1.0
+shader_parameter/scan_glitch_speed = 2.0
+shader_parameter/alpha_glitch_speed = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f5rye"]
+shader = ExtResource("3_g5km7")
+shader_parameter/hologram_color = Color(0.96064466, 0, 0.06941245, 1)
+shader_parameter/lines_frequency = 10.000000471740119
+shader_parameter/lines_speed = 1.0
+shader_parameter/scan_glitch_speed = 2.0
+shader_parameter/alpha_glitch_speed = 0.0
 
 [node name="InterfazNave" type="Control" unique_id=1789643280]
 layout_mode = 3
@@ -20,30 +66,48 @@ offset_bottom = 1280.0
 texture = ExtResource("1_xh7k7")
 
 [node name="Panel_Niveles" type="Button" parent="." unique_id=1671534164]
+material = SubResource("ShaderMaterial_puqa6")
 layout_mode = 0
-offset_left = 231.0
+offset_left = 226.0
 offset_top = 641.0
-offset_right = 401.0
-offset_bottom = 770.0
+offset_right = 361.0
+offset_bottom = 771.0
+icon = ExtResource("4_kpkvt")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Panel_Niveles" unique_id=320775273]
+stream = ExtResource("5_kpkvt")
 
 [node name="Label" type="Label" parent="Panel_Niveles" unique_id=289769240]
+material = SubResource("ShaderMaterial_0dqpo")
 layout_mode = 0
-offset_left = 16.0
-offset_top = 138.0
-offset_right = 153.0
-offset_bottom = 175.0
+offset_left = -1.0
+offset_top = 137.0
+offset_right = 136.0
+offset_bottom = 174.0
 theme_override_fonts/font = ExtResource("2_kvard")
 theme_override_font_sizes/font_size = 27
 text = "Niveles"
 
 [node name="Impresora" type="Button" parent="." unique_id=1326425437]
+material = SubResource("ShaderMaterial_7g6em")
 layout_mode = 0
 offset_left = 73.0
 offset_top = 703.0
 offset_right = 201.0
 offset_bottom = 822.0
+icon = ExtResource("4_7oh2x")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Impresora" unique_id=50042617]
+stream = ExtResource("5_kpkvt")
 
 [node name="Label" type="Label" parent="Impresora" unique_id=1458030722]
+material = SubResource("ShaderMaterial_0dqpo")
 layout_mode = 0
 offset_left = -19.0
 offset_top = 128.0
@@ -53,19 +117,23 @@ theme_override_fonts/font = ExtResource("2_kvard")
 theme_override_font_sizes/font_size = 27
 text = "Mejoras"
 
-[node name="Mineria" type="Button" parent="." unique_id=1022691470]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-
 [node name="Salir_Al_Menu" type="Button" parent="." unique_id=351192825]
+material = SubResource("ShaderMaterial_2sxwg")
 layout_mode = 0
 offset_left = 71.0
 offset_top = 228.0
 offset_right = 216.0
 offset_bottom = 372.0
+icon = ExtResource("7_kpkvt")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Salir_Al_Menu" unique_id=2122139424]
+stream = ExtResource("5_kpkvt")
 
 [node name="Label" type="Label" parent="Salir_Al_Menu" unique_id=2047948572]
+material = SubResource("ShaderMaterial_0dqpo")
 layout_mode = 0
 offset_left = -36.0
 offset_top = 152.0
@@ -76,18 +144,28 @@ theme_override_font_sizes/font_size = 27
 text = "Volver al menu"
 
 [node name="Compras" type="Button" parent="." unique_id=2033276833]
+material = SubResource("ShaderMaterial_f5rye")
 layout_mode = 0
-offset_left = 560.0
-offset_top = 822.0
-offset_right = 703.0
-offset_bottom = 943.0
+offset_left = 533.0
+offset_top = 819.0
+offset_right = 661.0
+offset_bottom = 944.0
+icon = ExtResource("4_6u5iw")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="Label" type="Label" parent="Compras" unique_id=1578249003]
+material = SubResource("ShaderMaterial_0dqpo")
 layout_mode = 0
-offset_left = -83.0
+offset_left = -59.0
 offset_top = 130.0
-offset_right = 155.0
+offset_right = 182.0
 offset_bottom = 167.0
 theme_override_fonts/font = ExtResource("2_kvard")
 theme_override_font_sizes/font_size = 27
 text = "Coming Soon"
+
+[connection signal="pressed" from="Panel_Niveles" to="." method="_on_panel_niveles_pressed"]
+[connection signal="pressed" from="Impresora" to="." method="_on_impresora_pressed"]
+[connection signal="pressed" from="Salir_Al_Menu" to="." method="_on_salir_al_menu_pressed"]

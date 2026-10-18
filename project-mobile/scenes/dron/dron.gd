@@ -74,7 +74,49 @@ func disparar(objetivo: Node2D) -> void:
 		push_warning("Falta asignar escena_laser en el dron")
 		return
 	var laser = escena_laser.instantiate()
-	laser.direccion = (objetivo.global_position - global_position).normalized()
+	laser.direccion = calcular_direccion_predictiva(objetivo, laser.velocidad)
 	laser.daño = dano_laser
 	get_tree().current_scene.add_child(laser)
 	laser.global_position = global_position
+	
+	#probabilidad de fallar
+	var dir = calcular_direccion_predictiva(objetivo, laser.velocidad) 
+	laser.direccion = dir.rotated(randf_range(-0.05, 0.05))
+	
+func calcular_direccion_predictiva(objetivo: Node2D, vel_laser: float) -> Vector2:
+	var pos_rel: Vector2 = objetivo.global_position - global_position
+	var vel_obj: Vector2 = Vector2.ZERO
+	if "velocity" in objetivo:
+		vel_obj = objetivo.velocity
+
+	# Resolver |pos_rel + vel_obj * t| = vel_laser * t
+	var a: float = vel_obj.dot(vel_obj) - vel_laser * vel_laser
+	var b: float = 2.0 * pos_rel.dot(vel_obj)
+	var c: float = pos_rel.dot(pos_rel)
+
+	var t: float = -1.0
+	if absf(a) < 0.0001:
+		# Velocidades casi iguales: ecuación lineal
+		if absf(b) > 0.0001:
+			t = -c / b
+	else:
+		var disc: float = b * b - 4.0 * a * c
+		if disc >= 0.0:
+			var raiz: float = sqrt(disc)
+			var t1: float = (-b - raiz) / (2.0 * a)
+			var t2: float = (-b + raiz) / (2.0 * a)
+			# Elegir el menor tiempo positivo
+			if t1 > 0.0 and t2 > 0.0:
+				t = min(t1, t2)
+			elif t1 > 0.0:
+				t = t1
+			elif t2 > 0.0:
+				t = t2
+
+	# Sin solución (el enemigo es más rápido y se aleja): apuntar directo
+	if t <= 0.0:
+		return pos_rel.normalized()
+
+	# Limitar el tiempo para no predecir demasiado lejos
+	t = min(t, 1.5)
+	return (pos_rel + vel_obj * t).normalized()

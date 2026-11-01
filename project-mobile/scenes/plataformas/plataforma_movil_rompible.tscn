@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ci1jta3khkbs6"]
+
+[ext_resource type="Script" uid="uid://dkb17b0q8mwn3" path="res://scenes/plataformas/plataforma_movil_rompible.gd" id="1_k4qjd"]
+[ext_resource type="Texture2D" uid="uid://oba78prebvnu" path="res://assets/environment/Tileset/plataformas2.png" id="2_064vi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rud2a"]
+size = Vector2(64, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46dvq"]
+size = Vector2(68, 30)
+
+[node name="PlataformaMovilRompible" type="AnimatableBody2D" unique_id=1876103837]
+script = ExtResource("1_k4qjd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=330318212]
+scale = Vector2(0.22742476, 0.2970297)
+texture = ExtResource("2_064vi")
+region_enabled = true
+region_rect = Rect2(391, 785, 299, 101.23309)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=882995298]
+shape = SubResource("RectangleShape2D_rud2a")
+
+[node name="Detector" type="Area2D" parent="." unique_id=1550093884]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector" unique_id=1618321547]
+shape = SubResource("RectangleShape2D_46dvq")

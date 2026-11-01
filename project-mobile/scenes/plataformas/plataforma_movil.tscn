@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ce2wolf3q8j1y"]
+
+[ext_resource type="Script" uid="uid://bbnp3ell1sw75" path="res://scenes/plataformas/plataforma_movil.gd" id="1_2iq6g"]
+[ext_resource type="Texture2D" uid="uid://oba78prebvnu" path="res://assets/environment/Tileset/plataformas2.png" id="2_2iq6g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8g53x"]
+size = Vector2(121.868645, 115.85365)
+
+[node name="Plataforma_Movile" type="AnimatableBody2D" unique_id=1756286389]
+script = ExtResource("1_2iq6g")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=319785000]
+position = Vector2(-0.9999981, -1)
+scale = Vector2(1.3285714, 0.7692308)
+texture = ExtResource("2_2iq6g")
+region_enabled = true
+region_rect = Rect2(415.74124, 30.408615, 140.04745, 52.06642)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1901867517]
+position = Vector2(-1, -1)
+scale = Vector2(1.477, 0.328)
+shape = SubResource("RectangleShape2D_8g53x")

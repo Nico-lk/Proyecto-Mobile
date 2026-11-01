@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://clixs17v8oc6e" path="res://scenes/plataformas/plataforma_intermitente.tscn" id="11_excbq"]
 [ext_resource type="PackedScene" uid="uid://dwicjt3m5vgxk" path="res://scenes/plataformas/plataforma_fija_traspasable.tscn" id="12_iav0o"]
 [ext_resource type="Texture2D" uid="uid://bxgw8ccqdt5gt" path="res://icon.svg" id="13_dnkej"]
+[ext_resource type="PackedScene" uid="uid://bp5h0ickxola2" path="res://scenes/pantalla_muerte.tscn" id="14_mm8aj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk5k4"]
 texture = ExtResource("4_6761a")
@@ -2214,8 +2215,9 @@ shape = SubResource("RectangleShape2D_floor")
 color = Color(0.3, 0.3, 0.35, 1)
 polygon = PackedVector2Array(-1000, -30, 1000, -30, 1000, 30, -1000, 30)
 
-[node name="Player" parent="." unique_id=970159852 instance=ExtResource("1_player")]
+[node name="Player" parent="." unique_id=970159852 node_paths=PackedStringArray("pantalla_muerte") instance=ExtResource("1_player")]
 position = Vector2(374, 1189)
+pantalla_muerte = NodePath("../PantallaMuerte")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=741456505]
 visible = false
@@ -2320,3 +2322,6 @@ position = Vector2(600, 1103)
 scale = Vector2(0.72656256, 0.710938)
 texture_normal = ExtResource("13_dnkej")
 action = "saltar"
+
+[node name="PantallaMuerte" parent="." unique_id=670193242 instance=ExtResource("14_mm8aj")]
+visible = false

@@ -3,6 +3,8 @@ extends CharacterBody2D
 
 @onready var tilemap: TileMapLayer = $"../TileMapLayer"
 
+@export var pantalla_muerte: CanvasLayer
+
 @export var speed: float = 300.0
 @export var jump_velocity_front: float = -500.0
 @export var jump_velocity_side: float = -450.0
@@ -85,6 +87,15 @@ func recibir_dano() -> void:
 	if vida <= 0:
 		morir()
 
+var muerto: bool = false
+
 func morir() -> void:
-	set_physics_process(false)   # Evita que reciba más daño o se siga moviendo
-	get_tree().call_deferred("reload_current_scene")
+	if muerto:
+		return
+	muerto = true
+	set_physics_process(false)
+	velocity = Vector2.ZERO
+
+	# Pequeña pausa para que se vea el golpe antes de mostrar los botones
+	await get_tree().create_timer(0.5).timeout
+	pantalla_muerte.mostrar()

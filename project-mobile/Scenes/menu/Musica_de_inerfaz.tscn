@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ddoifhoh3hb0l"]
+
+[ext_resource type="AudioStream" uid="uid://bwgcgqk3qs0iy" path="res://Assets/audio/Music_AMB_Interfaz-nave.mp3" id="1_b5oky"]
+[ext_resource type="Script" uid="uid://p1w7coruoe6q" path="res://Scenes/menu/musica_de_inerfaz.gd" id="1_k1hw6"]
+
+[sub_resource type="AudioStream" id="AudioStream_4gfbd"]
+
+[node name="Musica_de_interfaz" type="AudioStreamPlayer" unique_id=1489466850]
+stream = ExtResource("1_b5oky")
+autoplay = true
+parameters/looping = true
+script = ExtResource("1_k1hw6")
+musica = SubResource("AudioStream_4gfbd")

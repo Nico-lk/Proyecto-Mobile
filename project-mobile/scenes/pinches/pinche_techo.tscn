@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://0xe500ru5yll"]
 
 [ext_resource type="Script" uid="uid://blshgbfpvhmll" path="res://scenes/pinches/pinche_techo.gd" id="1_jssjc"]
-[ext_resource type="Texture2D" uid="uid://bxgw8ccqdt5gt" path="res://icon.svg" id="2_6qdlo"]
+[ext_resource type="Texture2D" uid="uid://oba78prebvnu" path="res://assets/environment/Tileset/plataformas2.png" id="2_g0ny4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3ykf"]
 
@@ -13,8 +13,10 @@ script = ExtResource("1_jssjc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1557545702]
 position = Vector2(-3.8146973e-06, 3.8146973e-06)
-scale = Vector2(0.32617188, 0.32617188)
-texture = ExtResource("2_6qdlo")
+scale = Vector2(2.3529418, 0.90476215)
+texture = ExtResource("2_g0ny4")
+region_enabled = true
+region_rect = Rect2(477, 81, 17, 42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1840983561]
 shape = SubResource("RectangleShape2D_q3ykf")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dwicjt3m5vgxk"]
+
+[ext_resource type="Texture2D" uid="uid://oba78prebvnu" path="res://assets/environment/Tileset/plataformas2.png" id="1_wrnp7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3ykf"]
+size = Vector2(246, 58)
+
+[node name="PlataformaFija" type="StaticBody2D" unique_id=1504982975]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1893726972]
+scale = Vector2(1.1336406, 1.0545454)
+texture = ExtResource("1_wrnp7")
+region_enabled = true
+region_rect = Rect2(1.8433323, 515.2654, 217.9053, 55.781128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=936087599]
+shape = SubResource("RectangleShape2D_q3ykf")
+one_way_collision = true

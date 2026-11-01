@@ -1,17 +1,22 @@
 [gd_scene format=3 uid="uid://c8mk5jrlcchch"]
 
-[ext_resource type="Texture2D" uid="uid://bxgw8ccqdt5gt" path="res://icon.svg" id="1_0p1cg"]
 [ext_resource type="Script" uid="uid://c8pq8extdlqco" path="res://scenes/pinches/pinche_suelo.gd" id="1_e10se"]
+[ext_resource type="Texture2D" uid="uid://oba78prebvnu" path="res://assets/environment/Tileset/plataformas2.png" id="2_e10se"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sk5k4"]
-size = Vector2(127, 63.5)
+size = Vector2(103, 36)
 
 [node name="PincheSuelo" type="Area2D" unique_id=706088381]
 script = ExtResource("1_e10se")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=26077510]
-texture = ExtResource("1_0p1cg")
+position = Vector2(0, -18)
+scale = Vector2(0.9137931, 0.57142854)
+texture = ExtResource("2_e10se")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(152, 807, 116, 63)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=698035391]
-position = Vector2(-0.5, -31.75)
+position = Vector2(-1.5, -18)
 shape = SubResource("RectangleShape2D_sk5k4")

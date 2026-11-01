@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://clixs17v8oc6e"]
+
+[ext_resource type="Script" uid="uid://clvfs8morbjm4" path="res://scenes/plataformas/plataforma_intermitente.gd" id="1_x4r43"]
+[ext_resource type="Texture2D" uid="uid://oba78prebvnu" path="res://assets/environment/Tileset/plataformas2.png" id="2_x4r43"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3ykf"]
+size = Vector2(164, 60)
+
+[node name="PlataformaIntermitente" type="StaticBody2D" unique_id=830612247]
+script = ExtResource("1_x4r43")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=638635299]
+scale = Vector2(1.1549296, 0.8787878)
+texture = ExtResource("2_x4r43")
+region_enabled = true
+region_rect = Rect2(218.0003, 11.960323, 142.9997, 66.71062)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=525047260]
+shape = SubResource("RectangleShape2D_q3ykf")

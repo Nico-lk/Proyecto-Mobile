@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ci1jta3khkbs6" path="res://scenes/plataformas/plataforma_movil_rompible.tscn" id="10_qxy0u"]
 [ext_resource type="PackedScene" uid="uid://clixs17v8oc6e" path="res://scenes/plataformas/plataforma_intermitente.tscn" id="11_excbq"]
 [ext_resource type="PackedScene" uid="uid://dwicjt3m5vgxk" path="res://scenes/plataformas/plataforma_fija_traspasable.tscn" id="12_iav0o"]
+[ext_resource type="Texture2D" uid="uid://bxgw8ccqdt5gt" path="res://icon.svg" id="13_dnkej"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk5k4"]
 texture = ExtResource("4_6761a")
@@ -2307,3 +2308,15 @@ velocidad = 800.0
 [node name="PlataformaFija" parent="." unique_id=1504982975 instance=ExtResource("12_iav0o")]
 position = Vector2(390.99997, -2408)
 scale = Vector2(3.245, 1)
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="." unique_id=1749000474]
+offset_left = 116.0
+offset_top = 1112.0
+offset_right = 156.0
+offset_bottom = 1152.0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="." unique_id=1737403033]
+position = Vector2(600, 1103)
+scale = Vector2(0.72656256, 0.710938)
+texture_normal = ExtResource("13_dnkej")
+action = "saltar"

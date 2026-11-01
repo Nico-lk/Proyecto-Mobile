@@ -34,9 +34,9 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_axis("ui_left", "ui_right")
 	velocity.x = input_dir * speed
 
-	var is_aiming_up := Input.is_key_pressed(KEY_W) or Input.is_key_pressed(KEY_UP)
+	var is_aiming_up := Input.is_action_pressed("ui_up")
 
-	if Input.is_key_pressed(KEY_SPACE) and is_on_floor():
+	if Input.is_action_pressed("saltar") and is_on_floor():
 		jump_type = "side" if input_dir != 0 else "front"
 		velocity.y = jump_velocity_side if jump_type == "side" else jump_velocity_front
 

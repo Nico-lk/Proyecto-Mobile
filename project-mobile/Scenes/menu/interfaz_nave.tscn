@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://byw1q0y6sjcle"]
 
-[ext_resource type="Script" uid="uid://bbqmi0sm0437s" path="res://Scenes/menu/interfaz_nave.gd" id="1_0dqpo"]
+[ext_resource type="Script" uid="uid://bbqmi0sm0437s" path="res://Scripts/interfaz_nave.gd" id="1_0dqpo"]
 [ext_resource type="Texture2D" uid="uid://dal6bwoeq6ua" path="res://Assets/Menu/Interior_de_la_nave.jpg" id="1_xh7k7"]
 [ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="2_kvard"]
 [ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://Scenes/menu/menu.gdshader" id="3_g5km7"]
@@ -14,7 +14,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_puqa6"]
 shader = ExtResource("3_g5km7")
 shader_parameter/hologram_color = Color(1, 0.627451, 0.14509805, 1)
-shader_parameter/lines_frequency = 10.000000471740119
+shader_parameter/lines_frequency = 10.00000047174012
 shader_parameter/lines_speed = 1.0
 shader_parameter/scan_glitch_speed = 2.0
 shader_parameter/alpha_glitch_speed = 0.0
@@ -30,7 +30,7 @@ shader_parameter/alpha_glitch_speed = 0.0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7g6em"]
 shader = ExtResource("3_g5km7")
 shader_parameter/hologram_color = Color(1, 0.627451, 0.14509805, 1)
-shader_parameter/lines_frequency = 10.000000471740119
+shader_parameter/lines_frequency = 10.00000047174012
 shader_parameter/lines_speed = 1.0
 shader_parameter/scan_glitch_speed = 2.0
 shader_parameter/alpha_glitch_speed = 0.0
@@ -38,7 +38,7 @@ shader_parameter/alpha_glitch_speed = 0.0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2sxwg"]
 shader = ExtResource("3_g5km7")
 shader_parameter/hologram_color = Color(1, 0.62904143, 0.1431793, 1)
-shader_parameter/lines_frequency = 10.000000471740119
+shader_parameter/lines_frequency = 10.00000047174012
 shader_parameter/lines_speed = 1.0
 shader_parameter/scan_glitch_speed = 2.0
 shader_parameter/alpha_glitch_speed = 0.0
@@ -46,7 +46,7 @@ shader_parameter/alpha_glitch_speed = 0.0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f5rye"]
 shader = ExtResource("3_g5km7")
 shader_parameter/hologram_color = Color(0.96064466, 0, 0.06941245, 1)
-shader_parameter/lines_frequency = 10.000000471740119
+shader_parameter/lines_frequency = 10.00000047174012
 shader_parameter/lines_speed = 1.0
 shader_parameter/scan_glitch_speed = 2.0
 shader_parameter/alpha_glitch_speed = 0.0

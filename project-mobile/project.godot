@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-ProgresoDeNivel="*uid://co4545ahmou1c"
+MusicaDeInerfaz="*uid://ddoifhoh3hb0l"
 
 [display]
 

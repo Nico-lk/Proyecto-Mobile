@@ -35,8 +35,11 @@ var vida_actual: int
 var jump_type: String = "front"
 var celdas_rompiendose: Dictionary = {}  # Evita activar la misma celda dos veces
 var vida: int = 100
+
 func _ready() -> void:
 	vida_actual = vida_maxima
+	var f := animated_sprite.sprite_frames
+	print("SpriteFrames: ", f.resource_path, " | idle speed: ", f.get_animation_speed(&"idle"))
 
 func recibir_daño(cantidad: int) -> void:
 	vida_actual = max(vida_actual - cantidad, 0)
@@ -50,17 +53,6 @@ func recibir_daño(cantidad: int) -> void:
 
 	if vida_actual <= 0:
 		morir()
-
-func morir() -> void:
-	get_tree().reload_current_scene()   # provisional, luego lo cambiamos por Game Over
-
-func _physics_process(delta: float) -> void:
-	if not is_on_floor():
-		velocity.y += gravity * delta
-
-func _ready() -> void:
-	var f := animated_sprite.sprite_frames
-	print("SpriteFrames: ", f.resource_path, " | idle speed: ", f.get_animation_speed(&"idle"))
 
 func _physics_process(delta: float) -> void:
 	
@@ -82,12 +74,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		intentar_sacudir()
 
-	update_animations(input_dir)
-
 	move_and_slide()
 	update_animations(input_dir, is_aiming_up)
 
-func update_animations(input_dir: float, is_aiming_up: bool) -> void:
 func registrar_sanguijuela(s: Node2D) -> void:
 	if s not in sanguijuelas:
 		sanguijuelas.append(s)
@@ -110,7 +99,7 @@ func intentar_sacudir() -> void:
 			var dir = (s.global_position - global_position).normalized() + Vector2.UP * 0.5
 			s.sacudir(dir.normalized())
 
-func update_animations(input_dir: float) -> void:
+func update_animations(input_dir: float, is_aiming_up: bool) -> void:
 	if input_dir > 0:
 		animated_sprite.flip_h = true
 	elif input_dir < 0:

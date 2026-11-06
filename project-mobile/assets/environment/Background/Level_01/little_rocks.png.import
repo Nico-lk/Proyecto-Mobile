@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://s1f6bbphhc0g"
-path="res://.godot/imported/little_rocks.png-b943e3e1942fe10b77c00e93c87fa3fd.ctex"
+path="res://.godot/imported/little_rocks.png-03a46e6bb118fc53efc39e4d44b67c77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/environment/Background/Level_01/little_rocks.png"
-dest_files=["res://.godot/imported/little_rocks.png-b943e3e1942fe10b77c00e93c87fa3fd.ctex"]
+source_file="res://Assets/environment/Background/Level_01/little_rocks.png"
+dest_files=["res://.godot/imported/little_rocks.png-03a46e6bb118fc53efc39e4d44b67c77.ctex"]
 
 [params]
 

@@ -3,6 +3,7 @@ extends Area2D
 @export var gravedad: float = 980.0
 @export var velocidad_max: float = 800.0
 @export var activado_por_jugador: bool = true
+@export var danio: int = 10
 
 @export_group("Respawn")
 @export var respawn: bool = false
@@ -12,6 +13,7 @@ var velocidad: float = 0.0
 var cayendo: bool = false
 var roto: bool = false
 var pos_inicial: Vector2
+
 
 func _ready() -> void:
 	pos_inicial = position
@@ -51,8 +53,8 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if roto:
 		return
-	if body.is_in_group("player") and body.has_method("recibir_dano"):
-		body.recibir_dano()
+	if body.is_in_group("player") and body.has_method("recibir_daño"):
+		body.recibir_daño(danio)
 	romper()
 
 func romper() -> void:

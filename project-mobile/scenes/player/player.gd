@@ -1,8 +1,5 @@
 extends CharacterBody2D
 
-
-@onready var tilemap: TileMapLayer = $"../TileMapLayer"
-
 @export var pantalla_muerte: CanvasLayer
 
 @export var speed: float = 300.0
@@ -39,19 +36,6 @@ func _ready() -> void:
 	vida_actual = vida_maxima
 	var f := animated_sprite.sprite_frames
 	print("SpriteFrames: ", f.resource_path, " | idle speed: ", f.get_animation_speed(&"idle"))
-
-func recibir_daño(cantidad: int) -> void:
-	vida_actual = max(vida_actual - cantidad, 0)
-	vida_cambiada.emit(vida_actual, vida_maxima)
-
-	animated_sprite.modulate = Color.RED
-	await get_tree().create_timer(0.1).timeout
-	if not is_inside_tree():
-		return
-	animated_sprite.modulate = Color.WHITE
-
-	if vida_actual <= 0:
-		morir()
 
 func _physics_process(delta: float) -> void:
 	
@@ -129,9 +113,15 @@ func _play(anim: StringName, fps: float) -> void:
 	if animated_sprite.animation != anim:
 		animated_sprite.play(anim)
 
-func recibir_dano() -> void:
-	vida_actual -= 50
-	print("Vida restante: ", vida_actual)
+func recibir_daño(cantidad: int) -> void:
+	vida_actual = max(vida_actual - cantidad, 0)
+	vida_cambiada.emit(vida_actual, vida_maxima)
+
+	animated_sprite.modulate = Color.RED
+	await get_tree().create_timer(0.1).timeout
+	if not is_inside_tree():
+		return
+	animated_sprite.modulate = Color.WHITE
 
 	var tween := create_tween()
 	tween.tween_property(animated_sprite, "modulate", Color.RED, 0.1)

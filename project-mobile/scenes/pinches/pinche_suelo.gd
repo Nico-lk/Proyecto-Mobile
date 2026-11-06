@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var tiempo_entre_danos: float = 1.0
-
+@export var danio: int = 10
 var cooldown: float = 0.0
 
 func _physics_process(delta: float) -> void:
@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
 
 	# Si el cooldown terminó, revisar si hay un jugador encima
 	for body in get_overlapping_bodies():
-		if body.is_in_group("player") and body.has_method("recibir_dano"):
-			body.recibir_dano()
+		if body.is_in_group("player") and body.has_method("recibir_daño"):
+			body.recibir_daño(danio)
 			cooldown = tiempo_entre_danos
 			break

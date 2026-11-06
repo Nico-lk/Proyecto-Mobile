@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k3jli0ey62td"
-path="res://.godot/imported/aiming_up.png-8f63a2989806c8db36a6d889ee97a8e3.ctex"
+path="res://.godot/imported/aiming_up.png-9212d309fe026bf716ba33cbbea10db5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/player/aiming_up.png"
-dest_files=["res://.godot/imported/aiming_up.png-8f63a2989806c8db36a6d889ee97a8e3.ctex"]
+source_file="res://assets/player/aiming_up.png"
+dest_files=["res://.godot/imported/aiming_up.png-9212d309fe026bf716ba33cbbea10db5.ctex"]
 
 [params]
 

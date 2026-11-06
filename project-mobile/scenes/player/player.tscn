@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bv3tmuiq2rnnt" path="res://scenes/player/player.gd" id="1"]
 [ext_resource type="SpriteFrames" uid="uid://6mkowgsdrskc" path="res://assets/player/player_frames.tres" id="2_dovo2"]
+[ext_resource type="Texture2D" uid="uid://bxgw8ccqdt5gt" path="res://icon.svg" id="3_gmlin"]
+[ext_resource type="PackedScene" uid="uid://dy1sg7jiohkcf" path="res://scenes/hud/hud.tscn" id="4_lvxji"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kifso"]
 radius = 27.0
@@ -27,3 +29,25 @@ shape = SubResource("CapsuleShape2D_kifso")
 limit_left = 0
 limit_right = 768
 limit_bottom = 1300
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1436218520]
+offset = Vector2(400, 1200)
+transform = Transform2D(1, 0, 0, 1, 400, 1200)
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="CanvasLayer" unique_id=974695341]
+offset_left = -285.0
+offset_top = -3.0
+offset_right = -245.0
+offset_bottom = 37.0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer" unique_id=299455568]
+position = Vector2(218.00003, -26)
+scale = Vector2(0.72656256, 0.710938)
+texture_normal = ExtResource("3_gmlin")
+action = "saltar"
+
+[node name="HUD" parent="CanvasLayer" unique_id=829710169 instance=ExtResource("4_lvxji")]
+offset_left = -358.0
+offset_top = -1161.0
+offset_right = -878.0
+offset_bottom = -2421.0

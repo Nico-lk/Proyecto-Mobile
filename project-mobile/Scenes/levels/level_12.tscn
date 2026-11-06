@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c1lvl01floor0"]
 
-[ext_resource type="PackedScene" uid="uid://dqr12rc6qpe0b" path="res://scenes/player/player.tscn" id="1_player"]
-[ext_resource type="PackedScene" uid="uid://mk7lhyr1rlh" path="res://scenes/dron/dron.tscn" id="2_nsrm0"]
-[ext_resource type="PackedScene" uid="uid://dcew2b8p0kg8s" path="res://scenes/spawnerenemigos/spawner_enemigos.tscn" id="4_x42e6"]
-[ext_resource type="PackedScene" uid="uid://dy1sg7jiohkcf" path="res://scenes/hud/hud.tscn" id="5_6761a"]
+[ext_resource type="PackedScene" uid="uid://dqr12rc6qpe0b" path="res://Scenes/player/player.tscn" id="1_u6ouu"]
+[ext_resource type="PackedScene" uid="uid://mk7lhyr1rlh" path="res://Scenes/dron/dron.tscn" id="2_b0xw6"]
+[ext_resource type="PackedScene" uid="uid://dcew2b8p0kg8s" path="res://Scenes/spawnerenemigos/spawner_enemigos.tscn" id="3_ibbjy"]
+[ext_resource type="PackedScene" uid="uid://dy1sg7jiohkcf" path="res://Scenes/hud/hud.tscn" id="4_cf7um"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
 size = Vector2(2000, 60)
@@ -20,18 +20,18 @@ shape = SubResource("RectangleShape2D_floor")
 color = Color(0.3, 0.3, 0.35, 1)
 polygon = PackedVector2Array(-1000, -30, 1000, -30, 1000, 30, -1000, 30)
 
-[node name="Player" parent="." unique_id=970159852 instance=ExtResource("1_player")]
+[node name="Player" parent="." unique_id=970159852 instance=ExtResource("1_u6ouu")]
 position = Vector2(360, 1146)
 
-[node name="dron" parent="." unique_id=648491918 instance=ExtResource("2_nsrm0")]
+[node name="dron" parent="." unique_id=648491918 instance=ExtResource("2_b0xw6")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=741456505]
 position = Vector2(360, 640)
 
-[node name="SpawnerEnemigos" parent="." unique_id=504348725 instance=ExtResource("4_x42e6")]
+[node name="SpawnerEnemigos" parent="." unique_id=504348725 instance=ExtResource("3_ibbjy")]
 position = Vector2(352, 145)
 
-[node name="HUD" parent="." unique_id=829710169 instance=ExtResource("5_6761a")]
+[node name="HUD" parent="." unique_id=829710169 instance=ExtResource("4_cf7um")]
 offset_left = 38.0
 offset_top = 45.0
 offset_right = 238.0

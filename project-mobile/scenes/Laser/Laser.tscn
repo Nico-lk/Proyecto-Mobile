@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c0h0il2e5sler"]
+
+[ext_resource type="Script" uid="uid://b6rilbkvgxh7i" path="res://scenes/Laser/laser.gd" id="1_ydbpa"]
+[ext_resource type="Texture2D" uid="uid://bk1lssjs8tvje" path="res://assets/sprites/laser/laser.png" id="2_16h4n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j87k5"]
+radius = 4.0
+
+[node name="laser" type="Area2D" unique_id=739920030]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_ydbpa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=895990096]
+shape = SubResource("CircleShape2D_j87k5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1654818249]
+scale = Vector2(0.006, 0.006)
+texture = ExtResource("2_16h4n")

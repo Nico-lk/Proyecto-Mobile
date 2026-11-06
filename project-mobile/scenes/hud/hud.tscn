@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dy1sg7jiohkcf"]
 
-[ext_resource type="Script" uid="uid://dxy8up2478yqn" path="res://scenes/hud/progressbar.gd" id="1_48c2t"]
+[ext_resource type="Script" uid="uid://dxy8up2478yqn" path="res://Scenes/hud/progressbar.gd" id="1_48c2t"]
 
 [node name="HUD" type="Control" unique_id=829710169]
 custom_minimum_size = Vector2(200, 20)

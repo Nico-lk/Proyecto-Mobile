@@ -1,19 +1,22 @@
 [gd_scene format=4 uid="uid://c1lvl01floor0"]
 
-[ext_resource type="PackedScene" uid="uid://dqr12rc6qpe0b" path="res://scenes/player/player.tscn" id="1_player"]
-[ext_resource type="Texture2D" uid="uid://bvorubmwjwrwq" path="res://assets/environment/Background/Level_01/background.png" id="2_x42e6"]
-[ext_resource type="Texture2D" uid="uid://s1f6bbphhc0g" path="res://assets/environment/Background/Level_01/little_rocks.png" id="3_6761a"]
-[ext_resource type="Texture2D" uid="uid://oba78prebvnu" path="res://assets/environment/Tileset/plataformas2.png" id="4_6761a"]
-[ext_resource type="Texture2D" uid="uid://4ol4n0bjxm1s" path="res://assets/environment/Background/Level_01/medium_rocks.png" id="4_sk5k4"]
-[ext_resource type="PackedScene" uid="uid://0xe500ru5yll" path="res://scenes/pinches/pinche_techo.tscn" id="5_sk5k4"]
-[ext_resource type="PackedScene" uid="uid://c8mk5jrlcchch" path="res://scenes/pinches/pinche_suelo.tscn" id="7_oc4kc"]
-[ext_resource type="PackedScene" uid="uid://ce2wolf3q8j1y" path="res://scenes/plataformas/plataforma_movil.tscn" id="8_s8va5"]
-[ext_resource type="PackedScene" uid="uid://bwt65wqt8i47f" path="res://scenes/plataformas/plataforma_rompible.tscn" id="9_dga24"]
-[ext_resource type="PackedScene" uid="uid://ci1jta3khkbs6" path="res://scenes/plataformas/plataforma_movil_rompible.tscn" id="10_qxy0u"]
-[ext_resource type="PackedScene" uid="uid://clixs17v8oc6e" path="res://scenes/plataformas/plataforma_intermitente.tscn" id="11_excbq"]
-[ext_resource type="PackedScene" uid="uid://dwicjt3m5vgxk" path="res://scenes/plataformas/plataforma_fija_traspasable.tscn" id="12_iav0o"]
+[ext_resource type="PackedScene" uid="uid://dqr12rc6qpe0b" path="res://Scenes/player/player.tscn" id="1_player"]
+[ext_resource type="Texture2D" uid="uid://bvorubmwjwrwq" path="res://Assets/environment/Background/Level_01/background.png" id="2_x42e6"]
+[ext_resource type="Texture2D" uid="uid://s1f6bbphhc0g" path="res://Assets/environment/Background/Level_01/little_rocks.png" id="3_6761a"]
+[ext_resource type="Texture2D" uid="uid://oba78prebvnu" path="res://Assets/environment/Tileset/plataformas2.png" id="4_6761a"]
+[ext_resource type="Texture2D" uid="uid://4ol4n0bjxm1s" path="res://Assets/environment/Background/Level_01/medium_rocks.png" id="4_sk5k4"]
+[ext_resource type="PackedScene" uid="uid://0xe500ru5yll" path="res://Scenes/pinches/pinche_techo.tscn" id="5_sk5k4"]
+[ext_resource type="PackedScene" uid="uid://c8mk5jrlcchch" path="res://Scenes/pinches/pinche_suelo.tscn" id="7_oc4kc"]
+[ext_resource type="PackedScene" uid="uid://ce2wolf3q8j1y" path="res://Scenes/plataformas/plataforma_movil.tscn" id="8_s8va5"]
+[ext_resource type="PackedScene" uid="uid://bwt65wqt8i47f" path="res://Scenes/plataformas/plataforma_rompible.tscn" id="9_dga24"]
+[ext_resource type="PackedScene" uid="uid://ci1jta3khkbs6" path="res://Scenes/plataformas/plataforma_movil_rompible.tscn" id="10_qxy0u"]
+[ext_resource type="PackedScene" uid="uid://clixs17v8oc6e" path="res://Scenes/plataformas/plataforma_intermitente.tscn" id="11_excbq"]
+[ext_resource type="PackedScene" uid="uid://dwicjt3m5vgxk" path="res://Scenes/plataformas/plataforma_fija_traspasable.tscn" id="12_iav0o"]
 [ext_resource type="Texture2D" uid="uid://bxgw8ccqdt5gt" path="res://icon.svg" id="13_dnkej"]
-[ext_resource type="PackedScene" uid="uid://bp5h0ickxola2" path="res://scenes/pantalla_muerte.tscn" id="14_mm8aj"]
+[ext_resource type="PackedScene" uid="uid://bp5h0ickxola2" path="res://Scenes/pantalla_muerte.tscn" id="14_mm8aj"]
+[ext_resource type="PackedScene" uid="uid://mk7lhyr1rlh" path="res://Scenes/dron/dron.tscn" id="15_lpshy"]
+[ext_resource type="PackedScene" uid="uid://dcew2b8p0kg8s" path="res://Scenes/spawnerenemigos/spawner_enemigos.tscn" id="16_onyy7"]
+[ext_resource type="PackedScene" uid="uid://dy1sg7jiohkcf" path="res://Scenes/hud/hud.tscn" id="17_flpb6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk5k4"]
 texture = ExtResource("4_6761a")
@@ -2325,3 +2328,14 @@ action = "saltar"
 
 [node name="PantallaMuerte" parent="." unique_id=670193242 instance=ExtResource("14_mm8aj")]
 visible = false
+
+[node name="dron" parent="." unique_id=648491918 instance=ExtResource("15_lpshy")]
+
+[node name="SpawnerEnemigos" parent="." unique_id=504348725 instance=ExtResource("16_onyy7")]
+position = Vector2(352, 145)
+
+[node name="HUD" parent="." unique_id=829710169 instance=ExtResource("17_flpb6")]
+offset_left = 38.0
+offset_top = 45.0
+offset_right = 238.0
+offset_bottom = 65.0

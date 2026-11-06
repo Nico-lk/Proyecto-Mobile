@@ -34,7 +34,6 @@ var vida_actual: int
 
 var jump_type: String = "front"
 var celdas_rompiendose: Dictionary = {}  # Evita activar la misma celda dos veces
-var vida: int = 100
 
 func _ready() -> void:
 	vida_actual = vida_maxima
@@ -131,14 +130,14 @@ func _play(anim: StringName, fps: float) -> void:
 		animated_sprite.play(anim)
 
 func recibir_dano() -> void:
-	vida -= 50
-	print("Vida restante: ", vida)
+	vida_actual -= 50
+	print("Vida restante: ", vida_actual)
 
 	var tween := create_tween()
 	tween.tween_property(animated_sprite, "modulate", Color.RED, 0.1)
 	tween.tween_property(animated_sprite, "modulate", Color.WHITE, 0.1)
 
-	if vida <= 0:
+	if vida_actual <= 0:
 		morir()
 
 var muerto: bool = false

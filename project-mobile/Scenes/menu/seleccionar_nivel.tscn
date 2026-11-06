@@ -34,16 +34,16 @@ script = ExtResource("1_3esmm")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=314006637]
 layout_mode = 0
-offset_right = 720.0
-offset_bottom = 1279.0
+offset_right = 768.0
+offset_bottom = 1364.2666
 texture = SubResource("GradientTexture2D_8pcgv")
 
 [node name="Label" type="Label" parent="." unique_id=118331508]
 material = SubResource("ShaderMaterial_3xd07")
 layout_mode = 0
 offset_top = 3.0
-offset_right = 720.0
-offset_bottom = 124.0
+offset_right = 772.0
+offset_bottom = 132.73889
 theme_override_fonts/font = ExtResource("1_phunf")
 theme_override_font_sizes/font_size = 57
 text = "Seleccionar Nivel"
@@ -117,8 +117,8 @@ expand_icon = true
 material = SubResource("ShaderMaterial_jq8tk")
 layout_mode = 0
 offset_top = 1055.0
-offset_right = 720.0
-offset_bottom = 1279.0
+offset_right = 765.0
+offset_bottom = 1364.0
 theme_override_fonts/font = ExtResource("1_phunf")
 theme_override_font_sizes/font_size = 130
 text = "Volver"

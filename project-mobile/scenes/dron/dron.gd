@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var suavizado_pegado: float = 0.1
 @export var dano_laser: int = 10
 @export var suavidad_lado: float = 2.0   # más bajo = cambio de lado más lento
+@onready var sonido_disparo = $SonidoDisparo
 
 var tiempo_transcurrido: float = 0.0
 var jugador: Node2D = null
@@ -78,6 +79,7 @@ func disparar(objetivo: Node2D) -> void:
 	laser.daño = dano_laser
 	get_tree().current_scene.add_child(laser)
 	laser.global_position = global_position
+	sonido_disparo.play()
 	
 	#probabilidad de fallar
 	var dir = calcular_direccion_predictiva(objetivo, laser.velocidad) 

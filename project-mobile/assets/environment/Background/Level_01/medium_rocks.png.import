@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4ol4n0bjxm1s"
-path="res://.godot/imported/medium_rocks.png-7b6ee36f4315fe1d56a7afcdd55d1bb6.ctex"
+path="res://.godot/imported/medium_rocks.png-ba15631c2a7379f7c2b4708fe376313d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/environment/Background/Level_01/medium_rocks.png"
-dest_files=["res://.godot/imported/medium_rocks.png-7b6ee36f4315fe1d56a7afcdd55d1bb6.ctex"]
+source_file="res://assets/environment/Background/Level_01/medium_rocks.png"
+dest_files=["res://.godot/imported/medium_rocks.png-ba15631c2a7379f7c2b4708fe376313d.ctex"]
 
 [params]
 

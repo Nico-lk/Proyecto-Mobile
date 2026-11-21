@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dy5mli84l0060"]
 
 [ext_resource type="Script" uid="uid://xv7ihqnlhr4q" path="res://Scripts/menu.gd" id="1_etjwi"]
-[ext_resource type="Texture2D" uid="uid://bs4chuhb7bek1" path="res://assets/Menu/Fondo.png" id="2_7g6em"]
-[ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://scenes/menu/menu.gdshader" id="3_puqa6"]
-[ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://assets/Font/Sterion-BLLld.ttf" id="4_7g6em"]
-[ext_resource type="AudioStream" uid="uid://b8h0bgofhc6q7" path="res://assets/audio/UI_Botton.wav" id="5_7g6em"]
-[ext_resource type="AudioStream" uid="uid://mrcs5bar4kks" path="res://assets/audio/UI_Music_Menu.mp3" id="6_puqa6"]
+[ext_resource type="Texture2D" uid="uid://bs4chuhb7bek1" path="res://Assets/Menu/Fondo.png" id="2_7g6em"]
+[ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://Scenes/menu/menu.gdshader" id="3_puqa6"]
+[ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="4_7g6em"]
+[ext_resource type="AudioStream" uid="uid://b8h0bgofhc6q7" path="res://Assets/audio/UI_Botton.wav" id="5_7g6em"]
+[ext_resource type="AudioStream" uid="uid://mrcs5bar4kks" path="res://Assets/audio/UI_Music_Menu.mp3" id="6_puqa6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jq8tk"]
 shader = ExtResource("3_puqa6")

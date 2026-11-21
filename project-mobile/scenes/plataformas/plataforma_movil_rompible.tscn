@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ci1jta3khkbs6"]
 
-[ext_resource type="Script" uid="uid://dkb17b0q8mwn3" path="res://scenes/plataformas/plataforma_movil_rompible.gd" id="1_k4qjd"]
-[ext_resource type="Texture2D" uid="uid://oba78prebvnu" path="res://assets/environment/Tileset/plataformas2.png" id="2_064vi"]
+[ext_resource type="Script" uid="uid://dkb17b0q8mwn3" path="res://Scenes/plataformas/plataforma_movil_rompible.gd" id="1_k4qjd"]
+[ext_resource type="Texture2D" uid="uid://oba78prebvnu" path="res://Assets/environment/Tileset/plataformas2.png" id="2_064vi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rud2a"]
 size = Vector2(64, 24)

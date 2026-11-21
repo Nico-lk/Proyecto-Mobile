@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://d037uem1q7edk"]
+
+[ext_resource type="Texture2D" uid="uid://bqlhxvj5m7kjk" path="res://Assets/sprites/Enemigo/spritesheet.png" id="1_sheet"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0l27"]
+atlas = ExtResource("1_sheet")
+region = Rect2(0, 0, 512, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e8od"]
+atlas = ExtResource("1_sheet")
+region = Rect2(512, 0, 512, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v63n2"]
+atlas = ExtResource("1_sheet")
+region = Rect2(1024, 0, 512, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjly4"]
+atlas = ExtResource("1_sheet")
+region = Rect2(1536, 0, 512, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6uw2v"]
+atlas = ExtResource("1_sheet")
+region = Rect2(2048, 0, 512, 320)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0l27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e8od")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v63n2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjly4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6uw2v")
+}],
+"loop": 1,
+"name": &"volar",
+"speed": 12.0
+}]

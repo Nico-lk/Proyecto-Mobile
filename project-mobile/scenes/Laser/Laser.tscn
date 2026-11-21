@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c0h0il2e5sler"]
 
-[ext_resource type="Script" uid="uid://b6rilbkvgxh7i" path="res://scenes/Laser/laser.gd" id="1_ydbpa"]
-[ext_resource type="Texture2D" uid="uid://bk1lssjs8tvje" path="res://assets/sprites/laser/laser.png" id="2_16h4n"]
+[ext_resource type="Script" uid="uid://b6rilbkvgxh7i" path="res://Scenes/Laser/laser.gd" id="1_ydbpa"]
+[ext_resource type="Texture2D" uid="uid://bk1lssjs8tvje" path="res://Assets/sprites/laser/laser.png" id="2_16h4n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j87k5"]
 radius = 4.0

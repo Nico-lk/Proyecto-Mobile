@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bp5h0ickxola2"]
 
-[ext_resource type="Script" uid="uid://b5vlcadkpskgf" path="res://scenes/pantalla_muerte.gd" id="1_7pwww"]
+[ext_resource type="Script" uid="uid://b5vlcadkpskgf" path="res://Scenes/pantalla_muerte.gd" id="1_7pwww"]
 
 [node name="PantallaMuerte" type="CanvasLayer" unique_id=670193242]
 process_mode = 3

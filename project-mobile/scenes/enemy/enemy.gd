@@ -32,13 +32,14 @@ var tiempo_dano: float = 0.0
 var alejado: float = 0.0
 
 @onready var area_deteccion: Area2D = $Area2D
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
 	vida_actual = vida_maxima
 	add_to_group("enemigos")
 	home = global_position
 	elegir_destino()
+	sprite.play("volar")
 	area_deteccion.body_entered.connect(_on_body_entered)
 	area_deteccion.body_exited.connect(_on_body_exited)
 

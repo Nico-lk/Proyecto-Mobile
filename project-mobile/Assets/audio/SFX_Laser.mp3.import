@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://d2v61itmalgvg"
-path="res://.godot/imported/SFX_Laser.mp3-24dc768db55a10ff1a433e0b49fc5159.mp3str"
+path="res://.godot/imported/SFX_Laser.mp3-9889fdbfdd1c1e239f4242a7aa7229dc.mp3str"
 
 [deps]
 
-source_file="res://assets/audio/SFX_Laser.mp3"
-dest_files=["res://.godot/imported/SFX_Laser.mp3-24dc768db55a10ff1a433e0b49fc5159.mp3str"]
+source_file="res://Assets/audio/SFX_Laser.mp3"
+dest_files=["res://.godot/imported/SFX_Laser.mp3-9889fdbfdd1c1e239f4242a7aa7229dc.mp3str"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bt5v6m30phdum"]
 
-[ext_resource type="Script" uid="uid://c154if3538c86" path="res://scenes/enemy/enemy.gd" id="1_muyyy"]
-[ext_resource type="Texture2D" uid="uid://bxgw8ccqdt5gt" path="res://icon.svg" id="2_84vye"]
+[ext_resource type="Script" uid="uid://c154if3538c86" path="res://Scenes/enemy/enemy.gd" id="1_muyyy"]
+[ext_resource type="SpriteFrames" path="res://Assets/sprites/Enemigo/spritesheet.tres" id="2_frames"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m2g58"]
 radius = 53.08484
@@ -13,8 +13,11 @@ radius = 800.0
 collision_layer = 2
 script = ExtResource("1_muyyy")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1870818354]
-texture = ExtResource("2_84vye")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1870818354]
+scale = Vector2(0.3, 0.3)
+sprite_frames = ExtResource("2_frames")
+animation = &"volar"
+autoplay = "volar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1697732557]
 shape = SubResource("CircleShape2D_m2g58")

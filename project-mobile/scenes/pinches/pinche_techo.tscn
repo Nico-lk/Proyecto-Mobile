@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://0xe500ru5yll"]
 
-[ext_resource type="Script" uid="uid://blshgbfpvhmll" path="res://scenes/pinches/pinche_techo.gd" id="1_jssjc"]
-[ext_resource type="Texture2D" uid="uid://oba78prebvnu" path="res://assets/environment/Tileset/plataformas2.png" id="2_g0ny4"]
+[ext_resource type="Script" uid="uid://blshgbfpvhmll" path="res://Scenes/pinches/pinche_techo.gd" id="1_jssjc"]
+[ext_resource type="Texture2D" uid="uid://oba78prebvnu" path="res://Assets/environment/Tileset/plataformas2.png" id="2_g0ny4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3ykf"]
 

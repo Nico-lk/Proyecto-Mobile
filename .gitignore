@@ -7,6 +7,10 @@
 export.cfg
 export_credentials.cfg
 
+# Export presets: cada uno tiene rutas locales (SDK, keystore) y la config
+# del compañero; no se versiona para no pisarla entre máquinas.
+export_presets.cfg
+
 # Imported translations (automatically generated from CSV files)
 *.translation
 
@@ -14,3 +18,27 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Editores / IDE
+.vscode/
+.idea/
+.vs/
+*.code-workspace
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Temporales
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# Builds exportados
+build/
+*.apk
+*.aab
+*.pck
+*.exe
+*.zip

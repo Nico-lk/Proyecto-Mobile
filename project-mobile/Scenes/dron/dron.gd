@@ -10,7 +10,6 @@ extends CharacterBody2D
 @export var retroceso: float = 5.0             # píxeles que retrocede el cañon al disparar
 
 @onready var sonido_disparo = $SonidoDisparo
-@onready var cuerpo: AnimatedSprite2D = $Cuerpo
 @onready var area_deteccion: Area2D = $AreaDeteccion
 @onready var timer_ataque: Timer = $TimerAtaque
 @onready var canon: Node2D = $Canon
@@ -22,12 +21,9 @@ var jugador: Node2D = null
 var enemigos_en_rango: Array[Node2D] = []
 var objetivo_actual: Node2D = null
 var lado_actual: float = 1.0
-var offset_cuerpo_x: float = 0.0
 
 
 func _ready() -> void:
-	offset_cuerpo_x = cuerpo.offset.x
-
 	var jugadores = get_tree().get_nodes_in_group("player")
 	if jugadores.size() > 0:
 		jugador = jugadores[0]
@@ -45,13 +41,12 @@ func _physics_process(delta: float) -> void:
 		tiempo_transcurrido += delta * 3.0
 		var flotacion_y = sin(tiempo_transcurrido) * 6.0
 
-		# Solo el lado se suaviza
-		var lado_objetivo = -1.0 if jugador.animated_sprite.flip_h else 1.0
-		lado_actual = lerp(lado_actual, lado_objetivo, 1.0 - exp(-suavidad_lado * delta))
+		# flip_h = true mira a la DERECHA, flip_h = false mira a la IZQUIERDA.
+		var mira_derecha: bool = jugador.animated_sprite.flip_h
 
-		# El cuerpo mira hacia donde mira el jugador
-		cuerpo.flip_h = lado_objetivo < 0.0
-		cuerpo.offset.x = -offset_cuerpo_x if cuerpo.flip_h else offset_cuerpo_x
+		# Lado donde flota el dron: +1 a la derecha del jugador, -1 a la izquierda
+		var lado_objetivo := -1.0 if mira_derecha else 1.0
+		lado_actual = lerp(lado_actual, lado_objetivo, 1.0 - exp(-suavidad_lado * delta))
 
 		var posicion_objetivo = jugador.global_position + Vector2(-radio_orbita * lado_actual, -altura + flotacion_y)
 
@@ -61,7 +56,8 @@ func _physics_process(delta: float) -> void:
 
 func actualizar_canon(delta: float) -> void:
 	# Sin objetivo, el cañon apunta hacia donde mira el jugador
-	var angulo_objetivo := 0.0 if lado_actual >= 0.0 else PI
+	# lado_actual = -1 cuando el jugador mira a la derecha, +1 cuando mira a la izquierda
+	var angulo_objetivo := 0.0 if lado_actual <= 0.0 else PI
 
 	if objetivo_actual and is_instance_valid(objetivo_actual):
 		angulo_objetivo = (objetivo_actual.global_position - canon.global_position).angle()

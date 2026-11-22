@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://xv7ihqnlhr4q" path="res://Scripts/menu.gd" id="1_etjwi"]
 [ext_resource type="Texture2D" uid="uid://bs4chuhb7bek1" path="res://Assets/Menu/Fondo.png" id="2_7g6em"]
+[ext_resource type="Script" path="res://Scripts/lienzo_adaptable.gd" id="3_ku2mk"]
 [ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://Scenes/menu/menu.gdshader" id="3_puqa6"]
 [ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="4_7g6em"]
 [ext_resource type="AudioStream" uid="uid://b8h0bgofhc6q7" path="res://Assets/audio/UI_Botton.wav" id="5_7g6em"]
@@ -41,13 +42,22 @@ grow_vertical = 2
 script = ExtResource("1_etjwi")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=278455333]
-layout_mode = 0
-offset_right = 1287.398
-offset_bottom = 1373.2952
-scale = Vector2(0.59732884, 0.99512535)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_7g6em")
+expand_mode = 1
 
-[node name="Titulo" type="Label" parent="." unique_id=198083336]
+[node name="Lienzo" type="Control" parent="." unique_id=2100573216]
+anchors_preset = 0
+offset_right = 768.0
+offset_bottom = 1366.0
+script = ExtResource("3_ku2mk")
+
+[node name="Titulo" type="Label" parent="Lienzo" unique_id=198083336]
 material = SubResource("ShaderMaterial_jq8tk")
 layout_mode = 1
 anchors_preset = 8
@@ -61,14 +71,14 @@ offset_right = 159.0
 offset_bottom = -275.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.5903413, 0.39341354, 1.92523e-07, 1)
 theme_override_constants/line_spacing = 3
-theme_override_constants/outline_size = 50
 theme_override_fonts/font = ExtResource("4_7g6em")
 theme_override_font_sizes/font_size = 150
+theme_override_colors/font_color = Color(0.5903413, 0.39341354, 1.92523e-07, 1)
+theme_override_constants/outline_size = 50
 text = "URAM"
 
-[node name="Jugar" type="Button" parent="." unique_id=1307823426]
+[node name="Jugar" type="Button" parent="Lienzo" unique_id=1307823426]
 modulate = Color(0, 0.55224776, 0.58252686, 1)
 material = SubResource("ShaderMaterial_puqa6")
 layout_mode = 1
@@ -89,10 +99,10 @@ theme_override_font_sizes/font_size = 80
 action_mode = 0
 text = "Jugar"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Jugar" unique_id=1672856161]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Lienzo/Jugar" unique_id=1672856161]
 stream = ExtResource("5_7g6em")
 
-[node name="Salir" type="Button" parent="." unique_id=1842017204]
+[node name="Salir" type="Button" parent="Lienzo" unique_id=1842017204]
 modulate = Color(0, 0.5529412, 0.58431375, 1)
 material = SubResource("ShaderMaterial_ku2mk")
 layout_mode = 1
@@ -113,7 +123,7 @@ theme_override_font_sizes/font_size = 80
 action_mode = 0
 text = "Salir"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Salir" unique_id=1409424991]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Lienzo/Salir" unique_id=1409424991]
 stream = ExtResource("5_7g6em")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1948294891]
@@ -122,5 +132,5 @@ volume_db = -20.982
 autoplay = true
 parameters/looping = true
 
-[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
-[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="Lienzo/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Lienzo/Salir" to="." method="_on_salir_pressed"]

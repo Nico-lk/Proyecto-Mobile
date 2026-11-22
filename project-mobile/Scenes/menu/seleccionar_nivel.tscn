@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ch8d2rws343m0" path="res://Scripts/seleccionar_nivel.gd" id="1_3esmm"]
 [ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="1_phunf"]
+[ext_resource type="Script" path="res://Scripts/lienzo_adaptable.gd" id="2_hqr5n"]
 [ext_resource type="Texture2D" uid="uid://c3vhngsw5ebec" path="res://Assets/Menu/Iconos/frame_002.png" id="3_hcent"]
 [ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://Scenes/menu/menu.gdshader" id="4_qmri6"]
 [ext_resource type="Texture2D" uid="uid://c3c3vfe2ew53y" path="res://Assets/Menu/Iconos/frame_021.png" id="4_vduas"]
@@ -33,12 +34,22 @@ grow_vertical = 2
 script = ExtResource("1_3esmm")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=314006637]
-layout_mode = 0
-offset_right = 768.0
-offset_bottom = 1364.2666
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = SubResource("GradientTexture2D_8pcgv")
+expand_mode = 1
 
-[node name="Label" type="Label" parent="." unique_id=118331508]
+[node name="Lienzo" type="Control" parent="." unique_id=97175211]
+anchors_preset = 0
+offset_right = 768.0
+offset_bottom = 1366.0
+script = ExtResource("2_hqr5n")
+
+[node name="Label" type="Label" parent="Lienzo" unique_id=118331508]
 material = SubResource("ShaderMaterial_3xd07")
 layout_mode = 0
 offset_top = 3.0
@@ -50,7 +61,7 @@ text = "Seleccionar Nivel"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="UramLevel1" type="Button" parent="." unique_id=1535186233]
+[node name="UramLevel1" type="Button" parent="Lienzo" unique_id=1535186233]
 layout_mode = 0
 offset_left = 85.0
 offset_top = 843.0
@@ -62,10 +73,10 @@ text = "Level 1"
 icon = ExtResource("3_hcent")
 expand_icon = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UramLevel1" unique_id=573265890]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Lienzo/UramLevel1" unique_id=573265890]
 stream = ExtResource("6_8pcgv")
 
-[node name="UramLevel2" type="Button" parent="." unique_id=1879827910]
+[node name="UramLevel2" type="Button" parent="Lienzo" unique_id=1879827910]
 layout_mode = 0
 offset_left = 85.0
 offset_top = 669.0
@@ -77,7 +88,7 @@ text = "Level 2"
 icon = ExtResource("3_hcent")
 expand_icon = true
 
-[node name="UramLevel3" type="Button" parent="." unique_id=794533703]
+[node name="UramLevel3" type="Button" parent="Lienzo" unique_id=794533703]
 layout_mode = 0
 offset_left = 85.0
 offset_top = 493.0
@@ -89,7 +100,7 @@ text = "Level 3"
 icon = ExtResource("3_hcent")
 expand_icon = true
 
-[node name="UramLevel4" type="Button" parent="." unique_id=1037016387]
+[node name="UramLevel4" type="Button" parent="Lienzo" unique_id=1037016387]
 layout_mode = 0
 offset_left = 85.0
 offset_top = 315.0
@@ -101,7 +112,7 @@ text = "Level 4"
 icon = ExtResource("3_hcent")
 expand_icon = true
 
-[node name="UramLevelBoss" type="Button" parent="." unique_id=1926812062]
+[node name="UramLevelBoss" type="Button" parent="Lienzo" unique_id=1926812062]
 layout_mode = 0
 offset_left = 85.0
 offset_top = 137.0
@@ -113,7 +124,7 @@ text = "Boss"
 icon = ExtResource("4_vduas")
 expand_icon = true
 
-[node name="Volver" type="Button" parent="." unique_id=1571761689]
+[node name="Volver" type="Button" parent="Lienzo" unique_id=1571761689]
 material = SubResource("ShaderMaterial_jq8tk")
 layout_mode = 0
 offset_top = 1055.0
@@ -123,8 +134,8 @@ theme_override_fonts/font = ExtResource("1_phunf")
 theme_override_font_sizes/font_size = 130
 text = "Volver"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Volver" unique_id=489711829]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Lienzo/Volver" unique_id=489711829]
 stream = ExtResource("6_8pcgv")
 
-[connection signal="pressed" from="UramLevel1" to="." method="_on_uram_nivel_1_pressed"]
-[connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]
+[connection signal="pressed" from="Lienzo/UramLevel1" to="." method="_on_uram_nivel_1_pressed"]
+[connection signal="pressed" from="Lienzo/Volver" to="." method="_on_volver_pressed"]

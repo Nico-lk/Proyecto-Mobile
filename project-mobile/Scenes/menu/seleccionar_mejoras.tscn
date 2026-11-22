@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://y1hccesvhcq2" path="res://Scripts/seleccionar_mejoras.gd" id="1_61taj"]
 [ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="1_dca5o"]
+[ext_resource type="Script" path="res://Scripts/lienzo_adaptable.gd" id="2_8fti5"]
 [ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://Scenes/menu/menu.gdshader" id="3_2h14p"]
 [ext_resource type="AudioStream" uid="uid://b8h0bgofhc6q7" path="res://Assets/audio/UI_Botton.wav" id="4_e0d7u"]
 [ext_resource type="Texture2D" uid="uid://c3c3vfe2ew53y" path="res://Assets/Menu/Iconos/frame_021.png" id="5_kekw4"]
@@ -32,12 +33,22 @@ grow_vertical = 2
 script = ExtResource("1_61taj")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=222944841]
-layout_mode = 0
-offset_right = 768.0
-offset_bottom = 1365.3334
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = SubResource("GradientTexture2D_hqr5n")
+expand_mode = 1
 
-[node name="Label" type="Label" parent="." unique_id=12903424]
+[node name="Lienzo" type="Control" parent="." unique_id=671968794]
+anchors_preset = 0
+offset_right = 768.0
+offset_bottom = 1366.0
+script = ExtResource("2_8fti5")
+
+[node name="Label" type="Label" parent="Lienzo" unique_id=12903424]
 layout_mode = 0
 offset_right = 761.0
 offset_bottom = 124.719444
@@ -47,7 +58,7 @@ text = "Construir mejoras"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Volver" type="Button" parent="." unique_id=307481891]
+[node name="Volver" type="Button" parent="Lienzo" unique_id=307481891]
 material = SubResource("ShaderMaterial_hcent")
 layout_mode = 0
 offset_top = 1072.0
@@ -57,10 +68,10 @@ theme_override_fonts/font = ExtResource("1_dca5o")
 theme_override_font_sizes/font_size = 130
 text = "Volver"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Volver" unique_id=501780804]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Lienzo/Volver" unique_id=501780804]
 stream = ExtResource("4_e0d7u")
 
-[node name="Button" type="Button" parent="." unique_id=997181012]
+[node name="Button" type="Button" parent="Lienzo" unique_id=997181012]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 169.0
@@ -70,7 +81,7 @@ icon = ExtResource("5_kekw4")
 flat = true
 expand_icon = true
 
-[node name="Button2" type="Button" parent="." unique_id=1811378240]
+[node name="Button2" type="Button" parent="Lienzo" unique_id=1811378240]
 layout_mode = 0
 offset_left = 303.0
 offset_top = 166.0
@@ -80,7 +91,7 @@ icon = ExtResource("6_bt7ns")
 flat = true
 expand_icon = true
 
-[node name="Button3" type="Button" parent="." unique_id=481792891]
+[node name="Button3" type="Button" parent="Lienzo" unique_id=481792891]
 layout_mode = 0
 offset_left = 555.0
 offset_top = 169.0
@@ -90,4 +101,4 @@ icon = ExtResource("7_8fti5")
 flat = true
 expand_icon = true
 
-[connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]
+[connection signal="pressed" from="Lienzo/Volver" to="." method="_on_volver_pressed"]

@@ -54,7 +54,7 @@ func _physics_process(delta: float) -> void:
 		if tiempo_sacudida <= 0.0:
 			sacudidas = 0
 
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("saltar") or Input.is_action_just_pressed("ui_accept"):
 		intentar_sacudir()
 
 	move_and_slide()

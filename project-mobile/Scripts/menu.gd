@@ -9,11 +9,11 @@ func _ready() -> void:
 func _on_jugar_pressed() -> void:
 	if cambiando_escena: return
 	cambiando_escena = true
-	/Jugar/AudioStreamPlayer.play()
+	$Lienzo/Jugar/AudioStreamPlayer.play()
 	await get_tree().create_timer(0.5).timeout
-	get_tree().change_scene_to_file("res://Scenes/menu/interfaz_nave.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu/interfaz_nave.tscn")
 
 func _on_salir_pressed() -> void:
-	/Salir/AudioStreamPlayer.play()
+	$Lienzo/Salir/AudioStreamPlayer.play()
 	await get_tree().create_timer(0.5).timeout
 	get_tree().quit()

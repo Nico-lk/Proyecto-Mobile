@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dqr12rc6qpe0b"]
 
-[ext_resource type="Script" uid="uid://bv3tmuiq2rnnt" path="res://Scenes/player/player.gd" id="1"]
+[ext_resource type="Script" uid="uid://bv3tmuiq2rnnt" path="res://scenes/player/player.gd" id="1"]
 [ext_resource type="SpriteFrames" uid="uid://6mkowgsdrskc" path="res://Assets/player/player_frames.tres" id="2_dovo2"]
 [ext_resource type="Texture2D" uid="uid://bxgw8ccqdt5gt" path="res://icon.svg" id="3_gmlin"]
-[ext_resource type="PackedScene" uid="uid://dy1sg7jiohkcf" path="res://Scenes/hud/hud.tscn" id="4_lvxji"]
+[ext_resource type="PackedScene" uid="uid://dy1sg7jiohkcf" path="res://scenes/hud/hud.tscn" id="4_lvxji"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kifso"]
 radius = 27.0
@@ -33,14 +33,15 @@ offset = Vector2(400, 1200)
 transform = Transform2D(1, 0, 0, 1, 400, 1200)
 
 [node name="VirtualJoystick" type="VirtualJoystick" parent="CanvasLayer" unique_id=974695341]
-offset_left = -285.0
-offset_top = -3.0
-offset_right = -245.0
-offset_bottom = 37.0
+offset_left = -270.0
+offset_top = 256.00003
+offset_right = -230.0
+offset_bottom = 296.00003
+scale = Vector2(1.72, 1.72)
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer" unique_id=299455568]
-position = Vector2(218.00003, -26)
-scale = Vector2(0.72656256, 0.710938)
+position = Vector2(163.00003, 217.99997)
+scale = Vector2(1.1265626, 1.102336)
 texture_normal = ExtResource("3_gmlin")
 action = "saltar"
 

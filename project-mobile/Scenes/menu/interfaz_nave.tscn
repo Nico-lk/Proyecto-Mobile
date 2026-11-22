@@ -3,12 +3,8 @@
 [ext_resource type="Script" uid="uid://bbqmi0sm0437s" path="res://Scripts/interfaz_nave.gd" id="1_0dqpo"]
 [ext_resource type="Texture2D" uid="uid://dal6bwoeq6ua" path="res://Assets/Menu/Interior_de_la_nave.jpg" id="1_xh7k7"]
 [ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="2_kvard"]
-<<<<<<< HEAD
 [ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://Scenes/menu/menu.gdshader" id="3_g5km7"]
 [ext_resource type="Script" path="res://Scripts/lienzo_adaptable.gd" id="3_kygfy"]
-=======
-[ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://Scenes/menu/menu.gdshader" id="3_g5km7"]
->>>>>>> origin/feature/sprite-enemigo
 [ext_resource type="Texture2D" uid="uid://dyax3wnljtnoq" path="res://Assets/Menu/Iconos/frame_001.png" id="4_6u5iw"]
 [ext_resource type="Texture2D" uid="uid://lh4605ydtl5j" path="res://Assets/Menu/Iconos/frame_024.png" id="4_7oh2x"]
 [ext_resource type="Texture2D" uid="uid://c2asw6fffbekg" path="res://Assets/Menu/Iconos/frame_022.png" id="4_kpkvt"]

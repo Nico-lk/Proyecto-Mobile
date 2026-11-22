@@ -2,12 +2,8 @@
 
 [ext_resource type="Script" uid="uid://xv7ihqnlhr4q" path="res://Scripts/menu.gd" id="1_etjwi"]
 [ext_resource type="Texture2D" uid="uid://bs4chuhb7bek1" path="res://Assets/Menu/Fondo.png" id="2_7g6em"]
-<<<<<<< HEAD
-[ext_resource type="Script" path="res://Scripts/lienzo_adaptable.gd" id="3_ku2mk"]
-[ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://Scenes/menu/menu.gdshader" id="3_puqa6"]
-=======
-[ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://Scenes/menu/menu.gdshader" id="3_puqa6"]
->>>>>>> origin/feature/sprite-enemigo
+[ext_resource type="Script" uid="uid://dm1ykl0g7slfb" path="res://Scripts/lienzo_adaptable.gd" id="3_ku2mk"]
+[ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://scenes/menu/menu.gdshader" id="3_puqa6"]
 [ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="4_7g6em"]
 [ext_resource type="AudioStream" uid="uid://b8h0bgofhc6q7" path="res://Assets/audio/UI_Botton.wav" id="5_7g6em"]
 [ext_resource type="AudioStream" uid="uid://mrcs5bar4kks" path="res://Assets/audio/UI_Music_Menu.mp3" id="6_puqa6"]
@@ -50,16 +46,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 517.7239
+offset_bottom = 6.691284
 grow_horizontal = 2
 grow_vertical = 2
-<<<<<<< HEAD
-texture = ExtResource("2_7g6em")
-expand_mode = 1
-=======
 scale = Vector2(0.59732884, 0.99512535)
 texture = ExtResource("2_7g6em")
-stretch_mode = 6
->>>>>>> origin/feature/sprite-enemigo
+expand_mode = 1
 
 [node name="Lienzo" type="Control" parent="." unique_id=2100573216]
 anchors_preset = 0
@@ -81,11 +74,11 @@ offset_right = 159.0
 offset_bottom = -275.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.5903413, 0.39341354, 1.92523e-07, 1)
 theme_override_constants/line_spacing = 3
+theme_override_constants/outline_size = 50
 theme_override_fonts/font = ExtResource("4_7g6em")
 theme_override_font_sizes/font_size = 150
-theme_override_colors/font_color = Color(0.5903413, 0.39341354, 1.92523e-07, 1)
-theme_override_constants/outline_size = 50
 text = "URAM"
 
 [node name="Jugar" type="Button" parent="Lienzo" unique_id=1307823426]

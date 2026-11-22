@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Project Mobile"
-run/main_scene="res://Scenes/levels/level_1.tscn"
+run/main_scene="uid://dy5mli84l0060"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
@@ -24,7 +24,7 @@ MusicaDeInerfaz="*uid://ddoifhoh3hb0l"
 window/size/viewport_width=768
 window/size/viewport_height=1366
 window/stretch/mode="canvas_items"
-window/stretch/aspect="keep_width"
+window/stretch/aspect="expand"
 window/handheld/orientation=1
 
 [global_group]

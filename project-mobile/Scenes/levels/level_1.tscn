@@ -14,9 +14,15 @@
 [ext_resource type="PackedScene" uid="uid://dwicjt3m5vgxk" path="res://Scenes/plataformas/plataforma_fija_traspasable.tscn" id="12_iav0o"]
 [ext_resource type="PackedScene" uid="uid://bp5h0ickxola2" path="res://Scenes/pantalla_muerte.tscn" id="14_mm8aj"]
 [ext_resource type="AudioStream" uid="uid://d2v61itmalgvg" path="res://Assets/audio/SFX_Laser.mp3" id="15_iu068"]
+<<<<<<< HEAD
+[ext_resource type="PackedScene" uid="uid://mk7lhyr1rlh" path="res://scenes/dron/dron.tscn" id="15_lpshy"]
+[ext_resource type="PackedScene" uid="uid://dcew2b8p0kg8s" path="res://scenes/spawnerenemigos/spawner_enemigos.tscn" id="16_onyy7"]
+[ext_resource type="Script" uid="uid://do0jiguq5me6j" path="res://scenes/levels/level_1.gd" id="17_level"]
+=======
 [ext_resource type="PackedScene" uid="uid://mk7lhyr1rlh" path="res://Scenes/dron/dron.tscn" id="15_lpshy"]
 [ext_resource type="PackedScene" uid="uid://dcew2b8p0kg8s" path="res://Scenes/spawnerenemigos/spawner_enemigos.tscn" id="16_onyy7"]
 [ext_resource type="Script" uid="uid://do0jiguq5me6j" path="res://Scenes/levels/level_1.gd" id="17_level"]
+>>>>>>> parent of d76f1e5 (feat-ad)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk5k4"]
 texture = ExtResource("4_6761a")

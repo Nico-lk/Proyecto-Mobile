@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b0xcygqhcyom6"]
+
+[ext_resource type="Script" uid="uid://djc14go21thgr" path="res://scenes/anuncio/ad.gd" id="1_uxy5l"]
+
+[node name="Ad" type="CanvasLayer" unique_id=1903279212]
+follow_viewport_scale = 0.001
+script = ExtResource("1_uxy5l")
+
+[node name="Control" type="Control" parent="." unique_id=451760417]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1050592521]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control" unique_id=1453701215]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand = true
+
+[node name="Skip" type="Button" parent="Control" unique_id=236280312]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="Control/Skip" to="." method="_on_skip_pressed"]

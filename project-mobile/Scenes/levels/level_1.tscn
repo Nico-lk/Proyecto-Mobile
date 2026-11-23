@@ -1,6 +1,4 @@
 [gd_scene format=4 uid="uid://c1lvl01floor0"]
-[ext_resource type="Script" path="res://Scenes/levels/level_1.gd" id="1_scriptlevel"]
-[ext_resource type="Script" path="res://Scenes/levels/level_1.gd" id="1_scriptlevel"]
 
 [ext_resource type="PackedScene" uid="uid://dqr12rc6qpe0b" path="res://Scenes/player/player.tscn" id="1_player"]
 [ext_resource type="Texture2D" uid="uid://bvorubmwjwrwq" path="res://Assets/environment/Background/Level_01/background.png" id="2_x42e6"]
@@ -18,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://d2v61itmalgvg" path="res://Assets/audio/SFX_Laser.mp3" id="15_iu068"]
 [ext_resource type="PackedScene" uid="uid://mk7lhyr1rlh" path="res://Scenes/dron/dron.tscn" id="15_lpshy"]
 [ext_resource type="PackedScene" uid="uid://dcew2b8p0kg8s" path="res://Scenes/spawnerenemigos/spawner_enemigos.tscn" id="16_onyy7"]
+[ext_resource type="Script" uid="uid://do0jiguq5me6j" path="res://Scenes/levels/level_1.gd" id="17_level"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk5k4"]
 texture = ExtResource("4_6761a")
@@ -2176,9 +2175,10 @@ size = Vector2(2000, 60)
 size = Vector2(2889.9375, 60.00003)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kifso"]
-size = Vector2(22.745098, 20)
+size = Vector2(768, 320)
 
 [node name="Level1" type="Node2D" unique_id=781776320]
+script = ExtResource("17_level")
 
 [node name="Background" type="Parallax2D" parent="." unique_id=1980622305]
 scroll_scale = Vector2(0, 0.1)
@@ -2328,10 +2328,7 @@ intervalo = 5.0
 max_enemigos = 3
 
 [node name="Trigger" type="Area2D" parent="." unique_id=325305654]
-position = Vector2(412, -2418)
-scale = Vector2(22.44, -32)
+position = Vector2(384, -2578)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger" unique_id=1084008203]
-position = Vector2(38.814617, 9.500001)
-scale = Vector2(1.7201425, 0.03875047)
 shape = SubResource("RectangleShape2D_kifso")

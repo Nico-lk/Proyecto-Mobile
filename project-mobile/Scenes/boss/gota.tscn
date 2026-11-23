@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://Scenes/boss/gota.gd" id="1_gota"]
+[ext_resource type="Texture2D" path="res://Assets/sprites/Boss/vomito.png" id="2_sprite"]
+[ext_resource type="Shader" path="res://Scenes/boss/goo.gdshader" id="3_goo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gota"]
+shader = ExtResource("3_goo")
+shader_parameter/tinte = Color(0.6, 1, 0.35, 1)
+shader_parameter/progreso = 0.0
+shader_parameter/fuerza_ruido = 1.0
+
+[node name="Gota" type="Sprite2D"]
+material = SubResource("ShaderMaterial_gota")
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_sprite")
+script = ExtResource("1_gota")

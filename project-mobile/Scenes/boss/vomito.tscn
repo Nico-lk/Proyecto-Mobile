@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://Scenes/boss/vomito.gd" id="1_vomito"]
+[ext_resource type="Texture2D" path="res://Assets/sprites/Boss/vomito.png" id="2_sprite"]
+[ext_resource type="Shader" path="res://Scenes/boss/goo.gdshader" id="3_goo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vomito"]
+shader = ExtResource("3_goo")
+shader_parameter/tinte = Color(0.65, 1, 0.35, 1)
+shader_parameter/progreso = 0.0
+shader_parameter/fuerza_ruido = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vomito"]
+radius = 20.0
+
+[node name="Vomito" type="Area2D"]
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("1_vomito")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vomito")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_vomito")
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("2_sprite")
+
+[node name="SonidoImpacto" type="AudioStreamPlayer2D" parent="."]
+max_distance = 2000.0

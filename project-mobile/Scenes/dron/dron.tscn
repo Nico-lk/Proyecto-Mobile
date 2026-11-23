@@ -35,7 +35,7 @@ position = Vector2(56, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=3956373]
 
 [node name="AreaDeteccion" type="Area2D" parent="." unique_id=139038894]
-scale = Vector2(0.493, 0.5)
+scale = Vector2(1, 1)
 collision_layer = 0
 collision_mask = 2
 

@@ -1,5 +1,8 @@
 extends CanvasLayer
 
+signal revivir
+
+@export var ad_scene = PackedScene
 @onready var boton_reintentar: Button = $CenterContainer/VBoxContainer/botonReintentar
 @onready var boton_salir: Button = $CenterContainer/VBoxContainer/botonSalir
 @onready var contenedor: CenterContainer = $CenterContainer

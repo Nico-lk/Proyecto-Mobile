@@ -1,6 +1,6 @@
 extends Node2D
 
-const EscenaBoss := preload("res://Scenes/boss/boss.tscn")
+const EscenaBoss := preload("res://scenes/boss/boss.tscn")
 
 var boss_spawned: bool = false
 

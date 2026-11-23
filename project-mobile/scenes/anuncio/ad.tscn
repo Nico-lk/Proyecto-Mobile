@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0xcygqhcyom6"]
 
-[ext_resource type="Script" uid="uid://djc14go21thgr" path="res://scenes/anuncio/ad.gd" id="1_uxy5l"]
+[ext_resource type="Script" uid="uid://ujq2bj8jx377" path="res://scenes/anuncio/ad.gd" id="1_uxy5l"]
 
 [node name="Ad" type="CanvasLayer" unique_id=1903279212]
 follow_viewport_scale = 0.001

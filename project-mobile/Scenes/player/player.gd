@@ -34,6 +34,8 @@ var celdas_rompiendose: Dictionary = {}  # Evita activar la misma celda dos vece
 
 func _ready() -> void:
 	vida_actual = vida_maxima
+	if pantalla_muerte and pantalla_muerte.has_signal("revivir"):
+		pantalla_muerte.revivir.connect(revivir)
 	var f := animated_sprite.sprite_frames
 	print("SpriteFrames: ", f.resource_path, " | idle speed: ", f.get_animation_speed(&"idle"))
 
@@ -138,7 +140,17 @@ func morir() -> void:
 	muerto = true
 	set_physics_process(false)
 	velocity = Vector2.ZERO
-
 	# Pequeña pausa para que se vea el golpe antes de mostrar los botones
 	await get_tree().create_timer(0.5).timeout
 	pantalla_muerte.mostrar()
+
+
+func revivir() -> void:
+	muerto = false
+	vida_actual = vida_maxima
+	vida_cambiada.emit(vida_actual, vida_maxima)
+	velocity = Vector2.ZERO
+	sanguijuelas.clear()
+	sacudidas = 0
+	animated_sprite.modulate = Color.WHITE
+	set_physics_process(true)

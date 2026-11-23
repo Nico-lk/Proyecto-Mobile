@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bxnrmwnsn3gg7"]
+
+[ext_resource type="Script" uid="uid://164148a817g3" path="res://Scenes/boss/boss.gd" id="1_boss"]
+[ext_resource type="SpriteFrames" uid="uid://dnik1jgdudofj" path="res://Assets/sprites/Boss/spritesheet_vuelo.tres" id="2_vuelo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_boss"]
+radius = 65.0
+
+[node name="Boss" type="CharacterBody2D" unique_id=624130821 groups=["enemigos"]]
+collision_layer = 2
+script = ExtResource("1_boss")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2102496246]
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("2_vuelo")
+animation = &"ataque"
+autoplay = "volar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=548362650]
+shape = SubResource("CircleShape2D_boss")
+
+[node name="PuntoVomito" type="Marker2D" parent="." unique_id=1735304388]
+position = Vector2(0, 40)
+
+[node name="TimerAtaque" type="Timer" parent="." unique_id=72093048]
+wait_time = 2.0
+autostart = true

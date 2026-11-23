@@ -1,4 +1,6 @@
 [gd_scene format=4 uid="uid://c1lvl01floor0"]
+[ext_resource type="Script" path="res://Scenes/levels/level_1.gd" id="1_scriptlevel"]
+[ext_resource type="Script" path="res://Scenes/levels/level_1.gd" id="1_scriptlevel"]
 
 [ext_resource type="PackedScene" uid="uid://dqr12rc6qpe0b" path="res://Scenes/player/player.tscn" id="1_player"]
 [ext_resource type="Texture2D" uid="uid://bvorubmwjwrwq" path="res://Assets/environment/Background/Level_01/background.png" id="2_x42e6"]
@@ -2173,6 +2175,9 @@ size = Vector2(2000, 60)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3ykf"]
 size = Vector2(2889.9375, 60.00003)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kifso"]
+size = Vector2(22.745098, 20)
+
 [node name="Level1" type="Node2D" unique_id=781776320]
 
 [node name="Background" type="Parallax2D" parent="." unique_id=1980622305]
@@ -2218,7 +2223,7 @@ color = Color(0.3, 0.3, 0.35, 1)
 polygon = PackedVector2Array(-1000, -30, 1000, -30, 1000, 30, -1000, 30)
 
 [node name="Player" parent="." unique_id=970159852 node_paths=PackedStringArray("pantalla_muerte") instance=ExtResource("1_player")]
-position = Vector2(374, 1189)
+position = Vector2(171, -2271)
 pantalla_muerte = NodePath("../PantallaMuerte")
 
 [node name="ParedDerecha" type="StaticBody2D" parent="." unique_id=1333472340]
@@ -2321,3 +2326,12 @@ stream = ExtResource("15_iu068")
 position = Vector2(352, 145)
 intervalo = 5.0
 max_enemigos = 3
+
+[node name="Trigger" type="Area2D" parent="." unique_id=325305654]
+position = Vector2(412, -2418)
+scale = Vector2(22.44, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger" unique_id=1084008203]
+position = Vector2(38.814617, 9.500001)
+scale = Vector2(1.7201425, 0.03875047)
+shape = SubResource("RectangleShape2D_kifso")

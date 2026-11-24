@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dal6bwoeq6ua"
-path="res://.godot/imported/Interior_de_la_nave.jpg-f3c8e699de73c309cf4b43f24485e490.ctex"
+path="res://.godot/imported/Interior_de_la_nave.jpg-de642bfe3349e10b208dc0d3777ae85e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menu/Interior_de_la_nave.jpg"
-dest_files=["res://.godot/imported/Interior_de_la_nave.jpg-f3c8e699de73c309cf4b43f24485e490.ctex"]
+source_file="res://assets/Menu/Interior_de_la_nave.jpg"
+dest_files=["res://.godot/imported/Interior_de_la_nave.jpg-de642bfe3349e10b208dc0d3777ae85e.ctex"]
 
 [params]
 

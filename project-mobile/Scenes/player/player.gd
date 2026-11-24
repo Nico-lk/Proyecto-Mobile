@@ -33,6 +33,12 @@ var jump_type: String = "front"
 var celdas_rompiendose: Dictionary = {}  # Evita activar la misma celda dos veces
 
 func _ready() -> void:
+	add_to_group("player")
+	vida_maxima += Progreso.bonus_vida()
+	speed *= Progreso.mult_velocidad()
+	jump_velocity_front *= Progreso.mult_salto()
+	jump_velocity_side *= Progreso.mult_salto()
+	sacudidas_necesarias = max(1, sacudidas_necesarias - Progreso.reduccion_sacudidas())
 	vida_actual = vida_maxima
 	var f := animated_sprite.sprite_frames
 	print("SpriteFrames: ", f.resource_path, " | idle speed: ", f.get_animation_speed(&"idle"))
@@ -114,6 +120,7 @@ func _play(anim: StringName, fps: float) -> void:
 		animated_sprite.play(anim)
 
 func recibir_daño(cantidad: int) -> void:
+	cantidad = maxi(1, roundi(cantidad * (1.0 - Progreso.reduccion_dano())))
 	vida_actual = max(vida_actual - cantidad, 0)
 	vida_cambiada.emit(vida_actual, vida_maxima)
 

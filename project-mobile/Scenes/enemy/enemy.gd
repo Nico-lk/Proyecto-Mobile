@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+const EscenaParte := preload("res://scenes/enemy/drop.tscn")
+
 @export var vida_maxima: int = 30
 @export var velocidad_vagar: float = 50.0
 @export var velocidad_persecucion: float = 160.0
@@ -12,7 +14,11 @@ extends CharacterBody2D
 @export var tiempo_aturdido: float = 1.5
 @export var fuerza_sacudida: float = 300.0
 @export var tiempo_alejado: float = 5.0   # tiempo total sin poder pegarse tras ser sacudido (incluye el aturdimiento)
-
+@export var monedas_al_morir: int = 5
+@export var parte: String = "ala"
+@export var cantidad_min: int = 1
+@export var cantidad_max: int = 2
+@export_range(0.0, 1.0) var prob_drop: float = 0.8
 
 # Sanguijuela
 @export var dano_pegado: int = 5            # daño por tick
@@ -201,4 +207,23 @@ func recibir_daño(cantidad: int) -> void:
 
 func morir() -> void:
 	despegar()
+	if randf() < prob_drop:
+		call_deferred("_soltar_parte")
 	queue_free()
+	
+func _soltar_parte() -> void:
+	var d := EscenaParte.instantiate()
+	d.tipo = parte
+	d.cantidad = randi_range(cantidad_min, cantidad_max)
+	get_tree().current_scene.add_child(d)
+	d.global_position = global_position
+	
+	
+# Se llama cuando el jugador entra a la zona del boss
+func desvanecer() -> void:
+	if pegado:
+		return  # si está pegado al jugador, lo dejamos
+	set_physics_process(false)
+	var t := create_tween()
+	t.tween_property(self, "modulate:a", 0.0, 0.5)
+	t.tween_callback(queue_free)

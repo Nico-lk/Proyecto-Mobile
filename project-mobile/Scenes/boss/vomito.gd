@@ -1,6 +1,6 @@
 extends Area2D
 
-const EscenaGota := preload("res://Scenes/boss/gota.tscn")
+const EscenaGota := preload("res://scenes/boss/gota.tscn")
 
 @export var velocidad: float = 520.0
 @export var dano: int = 15

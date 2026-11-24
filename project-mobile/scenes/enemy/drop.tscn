@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dejaq70jmhoto"]
+
+[ext_resource type="Script" uid="uid://38u3cf6rott2" path="res://drop.gd" id="1_xwhg1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m2g58"]
+
+[node name="Drop" type="Node2D" unique_id=698929984]
+script = ExtResource("1_xwhg1")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=397906611]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=186872725]
+shape = SubResource("CircleShape2D_m2g58")

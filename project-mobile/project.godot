@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 MusicaDeInerfaz="*uid://ddoifhoh3hb0l"
+Progreso="*uid://bmkjub56af7ae"
 
 [display]
 

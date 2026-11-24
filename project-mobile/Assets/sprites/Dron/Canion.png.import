@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://028gc3a7dryv"
-path="res://.godot/imported/Canion.png-bf4f2a754de9e8d0e0513e8315c6be57.ctex"
+path="res://.godot/imported/Canion.png-39d4f591a8d44046eb65c9ebcc1a1264.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/Dron/Canion.png"
-dest_files=["res://.godot/imported/Canion.png-bf4f2a754de9e8d0e0513e8315c6be57.ctex"]
+source_file="res://assets/sprites/Dron/Canion.png"
+dest_files=["res://.godot/imported/Canion.png-39d4f591a8d44046eb65c9ebcc1a1264.ctex"]
 
 [params]
 

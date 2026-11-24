@@ -21,6 +21,7 @@ var jugador: Node2D = null
 var enemigos_en_rango: Array[Node2D] = []
 var objetivo_actual: Node2D = null
 var lado_actual: float = 1.0
+var _espera_base: float
 
 
 func _ready() -> void:
@@ -31,7 +32,9 @@ func _ready() -> void:
 	area_deteccion.body_entered.connect(_on_enemigo_entrado)
 	area_deteccion.body_exited.connect(_on_enemigo_salido)
 	timer_ataque.timeout.connect(_on_timer_ataque_timeout)
-	timer_ataque.start()   # dispara en bucle; solo lo hará si hay objetivo
+	_espera_base = timer_ataque.wait_time
+	timer_ataque.wait_time = _espera_base / Progreso.mult_cadencia()
+	timer_ataque.start()  
 
 func _physics_process(delta: float) -> void:
 	actualizar_objetivo()
@@ -87,7 +90,6 @@ func _on_enemigo_salido(body: Node2D) -> void:
 func _on_timer_ataque_timeout() -> void:
 	if objetivo_actual and is_instance_valid(objetivo_actual):
 		disparar(objetivo_actual)
-		print("Timer, objetivo: ", objetivo_actual)
 
 func disparar(objetivo: Node2D) -> void:
 	if escena_laser == null:
@@ -95,16 +97,34 @@ func disparar(objetivo: Node2D) -> void:
 		return
 
 	var origen: Vector2 = punto_disparo.global_position
-	var laser = escena_laser.instantiate()
-	var dir: Vector2 = calcular_direccion_predictiva(objetivo, laser.velocidad, origen)
+	_crear_laser(objetivo, origen, 0.0)
 
-	laser.direccion = dir.rotated(randf_range(-0.05, 0.05))
-	laser.daño = dano_laser
-	get_tree().current_scene.add_child(laser)
-	laser.global_position = origen + dir * 24.0
+	# Disparo doble: segundo láser en paralelo, con un pequeño desvío
+	if randf() < Progreso.prob_doble():
+		_crear_laser(objetivo, origen, 10.0)
+
 	if is_instance_valid(sonido_disparo):
 		sonido_disparo.play()
 	_recoil()
+
+func _crear_laser(objetivo: Node2D, origen: Vector2, separacion: float) -> void:
+	var laser = escena_laser.instantiate()
+	var dir: Vector2 = calcular_direccion_predictiva(objetivo, laser.velocidad, origen)
+
+	# Daño con mejora y crítico
+	var dano: float = dano_laser * Progreso.mult_dano_dron()
+	var es_critico := randf() < Progreso.prob_critico()
+	if es_critico:
+		dano *= Progreso.mult_critico()
+
+	laser.direccion = dir.rotated(randf_range(-0.05, 0.05))
+	laser.daño = roundi(dano)
+	if es_critico:
+		laser.modulate = Color(1.0, 0.85, 0.2)   # amarillo para distinguirlo
+
+	get_tree().current_scene.add_child(laser)
+	# 'separacion' desplaza el láser de costado (perpendicular a la dirección)
+	laser.global_position = origen + dir * 24.0 + dir.orthogonal() * separacion
 
 func _recoil() -> void:
 	if not is_instance_valid(sprite_canon):

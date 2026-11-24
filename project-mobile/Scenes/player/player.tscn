@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqr12rc6qpe0b"]
 
 [ext_resource type="Script" uid="uid://bv3tmuiq2rnnt" path="res://scenes/player/player.gd" id="1"]
-[ext_resource type="SpriteFrames" uid="uid://6mkowgsdrskc" path="res://Assets/player/player_frames.tres" id="2_dovo2"]
+[ext_resource type="SpriteFrames" uid="uid://6mkowgsdrskc" path="res://assets/player/player_frames.tres" id="2_dovo2"]
 [ext_resource type="Texture2D" uid="uid://bxgw8ccqdt5gt" path="res://icon.svg" id="3_gmlin"]
 [ext_resource type="PackedScene" uid="uid://dy1sg7jiohkcf" path="res://scenes/hud/hud.tscn" id="4_lvxji"]
 
@@ -12,8 +12,19 @@ height = 134.0
 [node name="Player" type="CharacterBody2D" unique_id=1165410864 groups=["player"]]
 collision_layer = 9
 script = ExtResource("1")
+speed = null
 jump_velocity_front = -700.0
 jump_velocity_side = -750.0
+gravity = null
+vida_maxima = null
+sacudidas_necesarias = null
+ventana_sacudida = null
+idle_fps = null
+walk_fps = null
+salto_frente_fps = null
+salto_lateral_fps = null
+aiming_up_fps = null
+aim_up_fps = null
 
 [node name="Player_animation" type="AnimatedSprite2D" parent="." unique_id=1843478822]
 scale = Vector2(0.4, 0.4)

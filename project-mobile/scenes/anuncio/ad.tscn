@@ -4,6 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://bem8a65p2xhlm" path="res://Assets/video/anuncio.ogv" id="2_uxy5l"]
 
 [node name="Ad" type="CanvasLayer" unique_id=1903279212]
+layer = 10
 follow_viewport_scale = 0.001
 script = ExtResource("1_uxy5l")
 
@@ -14,8 +15,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = -283.0
+offset_right = -304.0
+offset_bottom = -283.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(15, 15)
 
 [node name="ColorRect" type="ColorRect" parent="Control" unique_id=1050592521]
 layout_mode = 1
@@ -33,5 +39,7 @@ expand = true
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+scale = Vector2(0.2, 0.2)
+text = "Skip"
 
 [connection signal="pressed" from="Control/Skip" to="." method="_on_skip_pressed"]

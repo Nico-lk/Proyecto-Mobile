@@ -14,5 +14,5 @@ func _on_video_finished() -> void:
 	queue_free()
 
 func _on_skip_pressed() -> void:
-	ad_finished.emit()
+	ad_finished.emit(true)
 	queue_free()

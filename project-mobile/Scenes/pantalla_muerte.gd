@@ -2,7 +2,7 @@ extends CanvasLayer
 
 signal revivir
 
-@export var ad_scene = PackedScene
+@export var ad_scene: PackedScene
 @onready var boton_reintentar: Button = $CenterContainer/VBoxContainer/botonReintentar
 @onready var boton_salir: Button = $CenterContainer/VBoxContainer/botonSalir
 @onready var contenedor: CenterContainer = $CenterContainer
@@ -19,23 +19,16 @@ func mostrar() -> void:
 
 func _on_reintentar() -> void:
 	if ad_scene == null:
-		push_warning("res://scenes/anuncio/ad.tscn")
 		return
-	boton_reintentar.disabled = true
-	contenedor.hide()  # oculta Reintentar y Volver mientras se ve el anuncio
+
+	contenedor.hide()
 
 	var ad = ad_scene.instantiate()
+	ad.ad_finished.connect(_on_ad_finished)
 	add_child(ad)
-	var completado: bool = await ad.ad_finished
 
-	if completado:
-		hide()
-		contenedor.show()  # listo para la próxima muerte
-		get_tree().paused = false
-		revivir.emit()
-	else:
-		contenedor.show()  # lo saltó: vuelven los botones
-
+func _on_ad_finished(completado: bool) -> void:
+	contenedor.show()
 	if completado:
 		hide()
 		get_tree().paused = false

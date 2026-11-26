@@ -38,7 +38,6 @@ func _ready() -> void:
 	speed *= Progreso.mult_velocidad()
 	jump_velocity_front *= Progreso.mult_salto()
 	jump_velocity_side *= Progreso.mult_salto()
-	sacudidas_necesarias = max(1, sacudidas_necesarias - Progreso.reduccion_sacudidas())
 	vida_actual = vida_maxima
 	var f := animated_sprite.sprite_frames
 	print("SpriteFrames: ", f.resource_path, " | idle speed: ", f.get_animation_speed(&"idle"))
@@ -143,6 +142,7 @@ func morir() -> void:
 	if muerto:
 		return
 	muerto = true
+	Progreso.guardar()
 	set_physics_process(false)
 	velocity = Vector2.ZERO
 

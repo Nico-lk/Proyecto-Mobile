@@ -211,13 +211,13 @@ func morir() -> void:
 		call_deferred("_soltar_parte")
 	queue_free()
 	
-func _soltar_parte() -> void:
+func _soltar_parte(tipo: String, cantidad: int, pos: Vector2) -> void:
 	var d := EscenaParte.instantiate()
-	d.tipo = parte
-	d.cantidad = randi_range(cantidad_min, cantidad_max)
+	d.tipo = tipo
+	d.cantidad = cantidad
 	get_tree().current_scene.add_child(d)
-	d.global_position = global_position
-	
+	d.global_position = pos
+	AvisoDrops.mostrar("+%d %s" % [cantidad, Progreso.NOMBRES_PARTES[tipo]])
 	
 # Se llama cuando el jugador entra a la zona del boss
 func desvanecer() -> void:

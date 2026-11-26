@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 MusicaDeInerfaz="*uid://ddoifhoh3hb0l"
 Progreso="*uid://bmkjub56af7ae"
+AvisoDrops="*uid://spf2xrj2xrid"
 
 [display]
 

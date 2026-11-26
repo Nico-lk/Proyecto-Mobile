@@ -246,6 +246,7 @@ func _morir() -> void:
 	_sonar_aparte(sonido_explosion)
 	Progreso.agregar_parte("nucleo", 3)
 	Progreso.guardar()
+	AvisoDrops.mostrar("+3 Núcleos", Color(1.0, 0.85, 0.2))
 
 	var escena := get_tree().current_scene
 

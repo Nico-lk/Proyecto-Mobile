@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c50qp57mcw5ng"
-path="res://.godot/imported/salto_lateral.png-cadbc17348cabd77f8e86a206c39b8bb.ctex"
+path="res://.godot/imported/salto_lateral.png-c78b3da0a704f4a61a1e3d77620dc2f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/salto_lateral.png"
-dest_files=["res://.godot/imported/salto_lateral.png-cadbc17348cabd77f8e86a206c39b8bb.ctex"]
+source_file="res://Assets/player/salto_lateral.png"
+dest_files=["res://.godot/imported/salto_lateral.png-c78b3da0a704f4a61a1e3d77620dc2f3.ctex"]
 
 [params]
 

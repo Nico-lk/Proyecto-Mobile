@@ -1,7 +1,7 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://dnik1jgdudofj"]
 
-[ext_resource type="Texture2D" uid="uid://ch6rotshjhkt0" path="res://assets/sprites/Boss/spritesheet_vuelo.png" id="1"]
-[ext_resource type="Texture2D" uid="uid://dmem25r7pd7w4" path="res://assets/sprites/Boss/spritesheet_ataque.png" id="1_gi0w6"]
+[ext_resource type="Texture2D" uid="uid://ch6rotshjhkt0" path="res://Assets/sprites/Boss/spritesheet_vuelo.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dmem25r7pd7w4" path="res://Assets/sprites/Boss/spritesheet_ataque.png" id="1_gi0w6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kfjv6"]
 atlas = ExtResource("1_gi0w6")

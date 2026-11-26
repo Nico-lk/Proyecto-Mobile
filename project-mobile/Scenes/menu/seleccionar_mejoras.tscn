@@ -1,13 +1,18 @@
 [gd_scene format=3 uid="uid://ew6sgw3bx1rc"]
 
 [ext_resource type="Script" uid="uid://y1hccesvhcq2" path="res://Scripts/seleccionar_mejoras.gd" id="1_61taj"]
-[ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://assets/Font/Sterion-BLLld.ttf" id="1_dca5o"]
+[ext_resource type="FontFile" uid="uid://ll6040c1he4m" path="res://Assets/Font/Sterion-BLLld.ttf" id="1_dca5o"]
 [ext_resource type="Script" uid="uid://dm1ykl0g7slfb" path="res://Scripts/lienzo_adaptable.gd" id="2_8fti5"]
 [ext_resource type="Shader" uid="uid://bahf0avir3ql1" path="res://scenes/menu/menu.gdshader" id="3_2h14p"]
-[ext_resource type="AudioStream" uid="uid://b8h0bgofhc6q7" path="res://assets/audio/UI_Botton.wav" id="4_e0d7u"]
-[ext_resource type="Texture2D" uid="uid://c3c3vfe2ew53y" path="res://assets/Menu/Iconos/frame_021.png" id="5_kekw4"]
-[ext_resource type="Texture2D" uid="uid://dt5uu5ud3c3te" path="res://assets/Menu/Iconos/frame_019.png" id="6_bt7ns"]
-[ext_resource type="Texture2D" uid="uid://cffghj6w537ge" path="res://assets/Menu/Iconos/frame_015.png" id="7_8fti5"]
+[ext_resource type="AudioStream" uid="uid://b8h0bgofhc6q7" path="res://Assets/audio/UI_Botton.wav" id="4_e0d7u"]
+[ext_resource type="Texture2D" uid="uid://c3c3vfe2ew53y" path="res://Assets/Menu/Iconos/frame_021.png" id="5_kekw4"]
+[ext_resource type="Texture2D" uid="uid://dt5uu5ud3c3te" path="res://Assets/Menu/Iconos/frame_019.png" id="6_bt7ns"]
+[ext_resource type="Texture2D" uid="uid://cffghj6w537ge" path="res://Assets/Menu/Iconos/frame_015.png" id="7_8fti5"]
+[ext_resource type="Texture2D" uid="uid://dhn3wiq7gd464" path="res://Assets/Menu/Iconos/frame_007.png" id="9_kr1ej"]
+[ext_resource type="Texture2D" uid="uid://drx5gxfylvc21" path="res://Assets/Menu/Iconos/Impulso de salto neón.png" id="10_4r2lm"]
+[ext_resource type="Texture2D" uid="uid://ci2ueuyysp0ka" path="res://Assets/Menu/Iconos/frame_018.png" id="10_5mssr"]
+[ext_resource type="Texture2D" uid="uid://t6faca32iewj" path="res://Assets/Menu/Iconos/frame_011.png" id="10_ptvdc"]
+[ext_resource type="Texture2D" uid="uid://hw0najjfoc4y" path="res://Assets/Menu/Iconos/Ícono neón de doble disparo.png" id="13_4r2lm"]
 
 [sub_resource type="Gradient" id="Gradient_e0d7u"]
 
@@ -180,7 +185,7 @@ offset_left = 303.0
 offset_top = 780.0
 offset_right = 487.0
 offset_bottom = 965.0
-icon = ExtResource("5_kekw4")
+icon = ExtResource("9_kr1ej")
 flat = true
 expand_icon = true
 
@@ -211,7 +216,7 @@ offset_left = 32.0
 offset_top = 780.0
 offset_right = 214.0
 offset_bottom = 965.0
-icon = ExtResource("6_bt7ns")
+icon = ExtResource("10_4r2lm")
 flat = true
 expand_icon = true
 
@@ -242,7 +247,7 @@ offset_left = 555.0
 offset_top = 480.0
 offset_right = 738.0
 offset_bottom = 663.0
-icon = ExtResource("7_8fti5")
+icon = ExtResource("10_5mssr")
 flat = true
 expand_icon = true
 
@@ -273,7 +278,7 @@ offset_left = 32.0
 offset_top = 480.0
 offset_right = 214.0
 offset_bottom = 665.0
-icon = ExtResource("6_bt7ns")
+icon = ExtResource("10_ptvdc")
 flat = true
 expand_icon = true
 
@@ -304,7 +309,7 @@ offset_left = 303.0
 offset_top = 480.0
 offset_right = 486.0
 offset_bottom = 663.0
-icon = ExtResource("7_8fti5")
+icon = ExtResource("13_4r2lm")
 flat = true
 expand_icon = true
 

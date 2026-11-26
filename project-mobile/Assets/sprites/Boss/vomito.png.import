@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2eg8hktn7dds"
-path="res://.godot/imported/vomito.png-fc3c0cd05642bed58156ac3541f409ea.ctex"
+path="res://.godot/imported/vomito.png-1345edda998633e668800f328c26983a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Boss/vomito.png"
-dest_files=["res://.godot/imported/vomito.png-fc3c0cd05642bed58156ac3541f409ea.ctex"]
+source_file="res://Assets/sprites/Boss/vomito.png"
+dest_files=["res://.godot/imported/vomito.png-1345edda998633e668800f328c26983a.ctex"]
 
 [params]
 

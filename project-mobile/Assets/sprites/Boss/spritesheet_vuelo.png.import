@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch6rotshjhkt0"
-path="res://.godot/imported/spritesheet_vuelo.png-8fd47282995fde691ecf2927f91029b1.ctex"
+path="res://.godot/imported/spritesheet_vuelo.png-86cc43846b773b22650ec94107ae792d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Boss/spritesheet_vuelo.png"
-dest_files=["res://.godot/imported/spritesheet_vuelo.png-8fd47282995fde691ecf2927f91029b1.ctex"]
+source_file="res://Assets/sprites/Boss/spritesheet_vuelo.png"
+dest_files=["res://.godot/imported/spritesheet_vuelo.png-86cc43846b773b22650ec94107ae792d.ctex"]
 
 [params]
 

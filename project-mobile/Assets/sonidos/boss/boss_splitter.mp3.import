@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://vpr8rwrx05p5"
-path="res://.godot/imported/boss_splitter.mp3-2d907ca8f1f9c2d15b915d6c7cda9106.mp3str"
+path="res://.godot/imported/boss_splitter.mp3-19b99721678ba82c078b3798ca95a027.mp3str"
 
 [deps]
 
-source_file="res://assets/sonidos/boss/boss_splitter.mp3"
-dest_files=["res://.godot/imported/boss_splitter.mp3-2d907ca8f1f9c2d15b915d6c7cda9106.mp3str"]
+source_file="res://Assets/sonidos/boss/boss_splitter.mp3"
+dest_files=["res://.godot/imported/boss_splitter.mp3-19b99721678ba82c078b3798ca95a027.mp3str"]
 
 [params]
 

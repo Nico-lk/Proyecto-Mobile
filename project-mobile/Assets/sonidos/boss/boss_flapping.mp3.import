@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://txra8gvtbsm8"
-path="res://.godot/imported/boss_flapping.mp3-2238d6d0dc0544c5a44de3d906924744.mp3str"
+path="res://.godot/imported/boss_flapping.mp3-f6cc46cfd0c780ce1fcbf49e56ae62de.mp3str"
 
 [deps]
 
-source_file="res://assets/sonidos/boss/boss_flapping.mp3"
-dest_files=["res://.godot/imported/boss_flapping.mp3-2238d6d0dc0544c5a44de3d906924744.mp3str"]
+source_file="res://Assets/sonidos/boss/boss_flapping.mp3"
+dest_files=["res://.godot/imported/boss_flapping.mp3-f6cc46cfd0c780ce1fcbf49e56ae62de.mp3str"]
 
 [params]
 

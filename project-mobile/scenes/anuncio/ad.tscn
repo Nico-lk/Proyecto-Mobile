@@ -21,25 +21,38 @@ offset_right = -304.0
 offset_bottom = -283.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(15, 15)
 
 [node name="ColorRect" type="ColorRect" parent="Control" unique_id=1050592521]
 layout_mode = 1
+offset_top = -100.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = -60.0
+scale = Vector2(15, 20)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control" unique_id=1453701215]
 layout_mode = 0
+offset_top = -100.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = -60.0
+scale = Vector2(15, 20)
 stream = ExtResource("2_uxy5l")
 expand = true
 
 [node name="Skip" type="Button" parent="Control" unique_id=236280312]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-scale = Vector2(0.2, 0.2)
+offset_left = -0.00033569336
+offset_top = -99.66666
+offset_right = 64.999664
+offset_bottom = -52.666656
+theme_override_font_sizes/font_size = 28
 text = "Skip"
+
+[node name="Label" type="Label" parent="Control" unique_id=1019607383]
+layout_mode = 0
+offset_top = -99.667
+offset_right = 65.0
+offset_bottom = -52.667
+theme_override_font_sizes/font_size = 28
+uppercase = true
 
 [connection signal="pressed" from="Control/Skip" to="." method="_on_skip_pressed"]
